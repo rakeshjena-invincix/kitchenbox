@@ -4,7 +4,7 @@ import veg from "../../assets/images/veg.png";
 import AddRemoveInputField from "../../components/AddRemoveInputField/AddRemoveInputField";
 import "./billing.css";
 
-export const Billing = () => {
+const Billing = () => {
   return (
     <>
       <div className="container d-flex justify-content-center mt-50 mb-50">
@@ -30,11 +30,6 @@ export const Billing = () => {
                   <div className="col-md-3">
                     <div className="mb-4 pull-left">
                       <img src={logo} width="40%" alt="logo" />
-                      <ul className="list list-unstyled mb-0 text-left">
-                        {/* <li>2269 Six Sigma</li>
-                        <li>New york city</li>
-                        <li>+1 474 44737 47 </li> */}
-                      </ul>
                     </div>
                   </div>
 
@@ -72,27 +67,11 @@ export const Billing = () => {
 
               <div className="table-responsive">
                 <table className="table table-lg">
-                  {/* <thead>
-                    <tr>
-                      <th>Dishes</th>
-                      <th>Quantity</th>
-
-                      <th>Total</th>
-                    </tr>
-                  </thead> */}
                   <tbody>
                     <tr>
                       <td>
-                        {/* <h6 className="mb-0">Arts and design template</h6>
-                        <span className="text-muted">
-                          in reprehenderit in voluptate velit esse cillum dolore
-                          eu fugiat nulla pariatur.Duis aute irure dolor in
-                          reprehenderit
-                        </span> */}
                         <AddRemoveInputField />
                       </td>
-                      {/* <td> 1</td>
-                      <td>&#8377;180</td> */}
                     </tr>
                   </tbody>
                 </table>
@@ -202,13 +181,6 @@ export const Billing = () => {
                   </div>
                 </div>
               </div>
-
-              {/* <div className="card-footer text-center">
-                <span className="text-muted ">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                </span>
-              </div> */}
             </div>
           </div>
         </div>
@@ -216,3 +188,4 @@ export const Billing = () => {
     </>
   );
 };
+export default Billing;

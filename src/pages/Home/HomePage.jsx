@@ -38,8 +38,8 @@ import {
   AiOutlinePercentage,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
-import "./Home.css";
 import MyVerticallyCenteredModal from "../Login/MyVerticallyCenteredModal";
+import "./Home.css";
 const HomePage = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
@@ -80,7 +80,7 @@ const HomePage = () => {
               id="navbarNavAltMarkup"
             >
               <div className="navbar-nav">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link " aria-current="page" href="#">
                   <AiOutlinePercentage /> Offers
                 </a>
                 <a className="nav-link" href="menu.html">
@@ -255,7 +255,7 @@ const HomePage = () => {
                   <h4>Dum Handi Biryani</h4>
 
                   <div className="rating">
-                    <div style={{ marginTop: "-5px", width: "10px" }}>
+                    <div style={{ width: "10px" }}>
                       <img src={NonVeg} alt="" />
                     </div>
 
@@ -301,7 +301,7 @@ const HomePage = () => {
                   <h4>Paneer Butter</h4>
 
                   <div className="rating">
-                    <div style={{ marginTop: "-5px", width: "10px" }}>
+                    <div style={{ width: "10px" }}>
                       <img src={veg} alt="" />
                     </div>
 
@@ -343,7 +343,7 @@ const HomePage = () => {
                   <h4>Satvik Veg Thali</h4>
 
                   <div className="rating">
-                    <div style={{ marginTop: "-5px", width: "10px" }}>
+                    <div style={{ width: "10px" }}>
                       <img src={veg} alt="" />
                     </div>
 
@@ -385,7 +385,7 @@ const HomePage = () => {
                   <h4>Dum Handi Biryani</h4>
 
                   <div className="rating">
-                    <div style={{ marginTop: "-5px", width: "10px" }}>
+                    <div style={{ width: "10px" }}>
                       <img src={NonVeg} alt="" />
                     </div>
 
@@ -427,7 +427,7 @@ const HomePage = () => {
                   <h4>Paneer Butter</h4>
 
                   <div className="rating">
-                    <div style={{ marginTop: "-5px", width: "10px" }}>
+                    <div style={{ width: "10px" }}>
                       <img src={veg} alt="" />
                     </div>
 
@@ -469,7 +469,7 @@ const HomePage = () => {
                   <h4>Satvik Veg Thali</h4>
 
                   <div className="rating">
-                    <div style={{ marginTop: "-5px", width: "10px" }}>
+                    <div style={{ width: "10px" }}>
                       <img src={veg} alt="" />
                     </div>
 
@@ -511,7 +511,7 @@ const HomePage = () => {
                   <h4>Dum Handi Biryani</h4>
 
                   <div className="rating">
-                    <div style={{ marginTop: "-5px", width: "10px" }}>
+                    <div style={{ width: "10px" }}>
                       <img src={NonVeg} alt="" />
                     </div>
 
@@ -553,7 +553,7 @@ const HomePage = () => {
                   <h4>Paneer Butter</h4>
 
                   <div className="rating">
-                    <div style={{ marginTop: "-5px", width: "10px" }}>
+                    <div style={{ width: "10px" }}>
                       <img src={veg} alt="" />
                     </div>
 

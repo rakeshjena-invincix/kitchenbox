@@ -1,9 +1,8 @@
+import { TextField } from "@mui/material";
+import Button from "@mui/material/Button";
 import React from "react";
 import Modal from "react-bootstrap/Modal";
-import Button from "@mui/material/Button";
-import { TextField } from "@mui/material";
 import OtpInput from "react-otp-input";
-import { Link } from "react-router-dom";
 
 const MyVerticallyCenteredModal = (props) => {
   const [show, setshow] = React.useState(true);
@@ -31,15 +30,22 @@ const MyVerticallyCenteredModal = (props) => {
     >
       <Modal.Header closeButton></Modal.Header>
       <Modal.Body style={{ marginLeft: "20px" }}>
-        <img src="./Login2.png" width={200} height={200} alt="login" />
-        <h5 style={{ fontSize: "18px", fontWeight: "300" }}>
+        <img
+          src="./Login2.png"
+          width={200}
+          height={200}
+          alt="login"
+          className="img-fluid"
+        />
+        <h5 className="" style={{ fontSize: "18px", fontWeight: "300" }}>
           Welcome to
           <br />
+        </h5>
+        <h5 className="pb-3">
           <span style={{ fontWeight: "800", fontSize: "22px" }}>
             Kitchen Box
           </span>
         </h5>
-
         {show ? (
           <>
             <TextField
@@ -52,6 +58,7 @@ const MyVerticallyCenteredModal = (props) => {
               InputLabelProps={{
                 shrink: true,
               }}
+              className="pb-3"
             />
           </>
         ) : (
@@ -60,9 +67,9 @@ const MyVerticallyCenteredModal = (props) => {
               <OtpInput
                 value={otp}
                 onChange={(e) => handleChange(e)}
-                numInputs={6}
+                numInputs={4}
                 style={{ width: "2rem" }}
-                inputStyle={{ width: "2rem", marginLeft: "5px" }}
+                inputStyle={{ width: "3rem", marginLeft: "5px" }}
               />
               <p
                 style={{
@@ -92,13 +99,19 @@ const MyVerticallyCenteredModal = (props) => {
 
         <Button
           variant="contained"
-          color="warning"
-          style={{ marginTop: "5px" }}
+          style={{
+            marginTop: "5px",
+            backgroundColor: "#FFC727",
+            borderRadius: "50px",
+          }}
           onClick={openOtpFunc}
         >
-          Send OTP
+          {show ? "Send OTP" : "Login"}
         </Button>
-        <p style={{ textAlign: "center", fontSize: "8px", marginTop: "4px" }}>
+        <p
+          className="pt-3"
+          style={{ textAlign: "center", fontSize: "8px", marginTop: "4px" }}
+        >
           By clicking on login, I accept all the terms and conditions
         </p>
       </Modal.Body>
