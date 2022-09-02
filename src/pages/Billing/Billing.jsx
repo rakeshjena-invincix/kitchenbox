@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../../assets/images/logo.png";
+import veg from "../../assets/images/veg.png";
 import AddRemoveInputField from "../../components/AddRemoveInputField/AddRemoveInputField";
 import "./billing.css";
 
@@ -16,10 +17,10 @@ export const Billing = () => {
 
                 <div className="header-elements ">
                   <button type="button" className="btn btn-light btn-sm mx-3">
-                    <i className="fa fa-file mr-2"></i> Save
+                    Save
                   </button>
                   <button type="button" className="btn btn-light btn-sm ml-3">
-                    <i className="fa fa-print mr-2"></i> Print
+                    Print
                   </button>
                 </div>
               </div>
@@ -41,13 +42,13 @@ export const Billing = () => {
                     <div className="mb-4 ">
                       <div className="text-sm-right">
                         <h4 className="invoice-color mb-2 mt-md-2">
-                          Billing #KB{Math.floor(Math.random() * 1000 + 1)}
+                          Order #{Math.floor(Math.random() * 1000 + 1)}
                         </h4>
                         <ul className="list list-unstyled mb-0">
                           <li>
                             Date:{" "}
                             <span className="font-weight-semibold">
-                              {Date(Date.now()).slice(0, 16)}
+                              {new Date().toLocaleString()}
                             </span>
                           </li>
                           <li>
@@ -97,29 +98,92 @@ export const Billing = () => {
                 </table>
               </div>
 
-              <div className="card-body">
-                <div className="d-md-flex flex-md-wrap justify-content-end">
+              <div className="card-body d-flex justify-content-between">
+                <div className="d-md-flex">
                   <div className="pt-2 mb-3 wmin-md-400 ml-auto">
-                    <h6 className="mb-3 text-left">Total due</h6>
+                    {/* <h6 className="mb-3 text-left">Item Total</h6> */}
                     <div className="table-responsive">
                       <table className="table">
                         <tbody>
                           <tr>
-                            <th className="text-start">Subtotal:</th>
-                            <td className="text-end">&#8377; 1,090</td>
+                            <th className="text-start">Order:</th>
+                            <td className="text-end">#8377</td>
+                          </tr>
+                          <tr>
+                            <th className="text-start">Address:</th>
+                            <td className="text-end">
+                              Bangalore, Karnataka, India
+                            </td>
+                          </tr>
+                          <tr>
+                            <th className="text-start">Delivered Time:</th>
+                            <td className="text-end">
+                              {new Date().toLocaleString()}
+                            </td>
+                          </tr>
+                          <tr>
+                            <th className="text-start">Ordered By</th>
+                            <td className="text-end ">Kishore</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div className="d-md-flex">
+                  <div className="pt-2 mb-3 wmin-md-400 ml-auto">
+                    <div className="d-flex justify-content-between fw-bold">
+                      <span className="mb-3 text-start ">
+                        <img src={veg} width="15" /> Tandoori Roti x 1
+                      </span>
+                      <span className=" text-end">&#8377; 62</span>
+                    </div>
+                    <div className="d-flex justify-content-between fw-bold">
+                      <span className="mb-3 text-start ">
+                        <img src={veg} width="15" /> Paneer Tika Masala x 2
+                      </span>
+                      <span className=" text-end">&#8377; 130</span>
+                    </div>
+                    {/* <h6 className="mb-3 text-start">Item Total</h6> */}
+                    <div className="table-responsive">
+                      <table className="table">
+                        <tbody>
+                          <tr>
+                            <th className="text-start">Item Total:</th>
+                            <td className="text-end">&#8377; 192.00</td>
                           </tr>
                           <tr>
                             <th className="text-start">
-                              GST:{" "}
-                              <span className="font-weight-normal">(25%)</span>
+                              Order Packaging Charges:
                             </th>
-                            <td className="text-end">&#8377; 27</td>
+                            <td className="text-end">&#8377; 12.00</td>
                           </tr>
                           <tr>
-                            <th className="text-start">Total:</th>
-                            <td className="text-end text-primary">
+                            <th className="text-start">
+                              Delivery partner fee:
+                            </th>
+                            <td className="text-end">&#8377; 91.00</td>
+                          </tr>
+                          <tr>
+                            <th className="text-start text-success">
+                              Discount Applied (MISSEDYOU):
+                            </th>
+                            <td className="text-end text-success">
+                              &#8377; -38.40
+                            </td>
+                          </tr>
+                          <tr>
+                            <th className="text-start">
+                              Taxes:{" "}
+                              {/* <span className="font-weight-normal">(25%)</span> */}
+                            </th>
+                            <td className="text-end">&#8377; 9.05</td>
+                          </tr>
+                          <tr>
+                            <th className="text-end fw-bold">BILL TOTAL:</th>
+                            <td className="text-end fw-bold">
                               <h5 className="font-weight-semibold">
-                                &#8377; 1,160
+                                &#8377; 206.00
                               </h5>
                             </td>
                           </tr>
@@ -128,10 +192,10 @@ export const Billing = () => {
                     </div>
 
                     <div className="text-right mt-3">
-                      <button type="button" className="btn btn-primary">
-                        <b>
-                          <i className="fa fa-paper-plane-o mr-1"></i>
-                        </b>{" "}
+                      <button type="button" className="btn btn-outline-info">
+                        Payment Option
+                      </button>{" "}
+                      <button type="button" className="btn btn-outline-primary">
                         Send invoice
                       </button>
                     </div>
@@ -139,12 +203,12 @@ export const Billing = () => {
                 </div>
               </div>
 
-              <div className="card-footer text-center">
+              {/* <div className="card-footer text-center">
                 <span className="text-muted ">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </span>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

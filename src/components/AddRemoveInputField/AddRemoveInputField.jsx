@@ -346,7 +346,7 @@ const AddRemoveInputField = () => {
               <h4
                 onClick={addInputField}
                 color="green"
-                className="btn btn-success"
+                className="btn btn-sm btn-outline-success"
                 style={{
                   cursor: "pointer",
                 }}
