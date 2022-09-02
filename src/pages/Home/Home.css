@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;1,300&display=swap");
+body {
+  font-family: "Poppins", sans-serif;
+}
+a.nav-link {
+  color: #000;
+  font-weight: 500;
+  font-size: 17px;
+}
+.offercard1 img {
+  width: 100%;
+}
+.food-banner {
+  margin: 33px 0;
+}
+.top-selling img {
+  width: 100%;
+}
+.top-selling h5 {
+  font-size: 18px;
+  padding: 14px 0 0 0;
+  text-align: center;
+}
+.top-selling h2 {
+  font-size: 32px;
+  padding: 0 0 0 14px;
+}
+.top-selling h2 {
+  font-size: 32px;
+  padding: 10px 0 33px 0;
+}
+.allorder-1 img {
+  width: 100%;
+}
+.allorder {
+  margin: 33px 0;
+}
+.today-special img {
+  width: 100%;
+}
+.today-special h5 {
+  font-size: 17px;
+  padding: 12px 0 0;
+}
+.rating {
+  display: flex;
+  justify-content: space-around;
+  height: 17px;
+  margin: 18px 0px;
+}
+.price {
+  display: flex;
+  justify-content: space-between;
+}
+.price p {
+  font-size: 22px;
+  font-weight: 500;
+}
+.delicacies-dishes h4 {
+  font-size: 22px;
+  padding: 11px 0 5px;
+}
+.price p {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+.price a {
+  color: #000;
+  font-size: 16px;
+  background: #ffc727;
+  padding: 0px 42px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 500;
+}
+.delicacies-dishes {
+  padding: 5px 6px;
+}
+.delicacies-dishes img {
+  width: 100%;
+}
+.starrate {
+  display: flex;
+  align-items: flex-end;
+  /* align-content: center; */
+  margin-top: 20px;
+}
+
+.delicacies {
+  margin: 39px 0;
+}
+.delicacies h2 {
+  margin-bottom: 22px;
+  font-size: 32px;
+}
+.delicacies-dishes {
+  padding: 14px 14px;
+  margin-bottom: 24px;
+}
+.delicacies-dishes:hover {
+  box-shadow: 1px 0px 6px 3px #e7e7e7;
+  border-radius: 9px;
+}
+.today-special h3 {
+  padding: 21px 0 32px 0px;
+}
+.footer {
+  background: #000;
+}
+.footer {
+  background: #000;
+  padding: 6px 0;
+}
+.footer h5 {
+  color: #e4e4e4;
+}
+.footer ul li {
+  color: #ccc;
+  list-style: none;
+  padding: 6px 0;
+}
+.footer ul {
+  padding: 0 0;
+}
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+.footer h5 {
+  color: #fff;
+  margin-bottom: 24px;
+}
+.allorder h2 {
+  padding: 4px 0 19px;
+}
+.ourmap iframe {
+  border-radius: 4px;
+  /* box-shadow: 2px 1px 5px 4px #e1e1e1; */
+  outline: 3px solid #ccc;
+  margin-bottom: 34px;
+}
+.ourmap h2 {
+  margin: 10px 0 33px;
+}
+.contactcall {
+  padding: 15px 32px;
+  background: #fbfbfb;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.contactcall i {
+  color: #000000;
+  background: #efefef;
+  width: 46px;
+  height: 46px;
+  text-align: center;
+  line-height: 47px;
+  border-radius: 50%;
+  border: 1px solid gainsboro;
+}
+.contactcall h4 {
+  font-size: 18px;
+  margin-top: 13px;
+}
+.contactcall p {
+  font-size: 14px;
+  margin-top: 13px;
+}
+.contactcall {
+  padding: 15px 32px;
+  background: #fbfbfb;
+  border: 1px solid #e2e2e2;
+  border-radius: 4px;
+  text-align: center;
+  /* height: 174px; */
+}
+.address {
+  margin-bottom: 27px;
+}
+.footer ul li {
+  display: inline-block;
+}
+.footer i.fa.fa-envelope {
+  font-size: 15px;
+}
+.footer h4 {
+  font-size: 17px;
+}
+.footer ul {
+  margin: 0;
+}
+.copyright p {
+  color: #c7c7c7;
+  margin-bottom: 0;
+  padding: 5px 0 0;
+}
+.ourmap {
+  margin-top: 37px;
+}
+.order-now img {
+  width: 100%;
+}
+.navbar-nav ul li {
+  display: inline-block;
+}
+.navbar-nav ul {
+  margin-bottom: 0;
+}
+.header nav {
+  box-shadow: 0px 6px 20px 9px #0000001a;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 15px 0;
+}
+.navbar-nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #000;
+  background-color: #ffc000;
+}
+.nav-link {
+  color: #000000;
+}
+
+div#v-pills-tab {
+  width: 43%;
+  border-right: 1px solid #ccc;
+  padding: 0 15px 0 0px;
+  position: sticky;
+  top: 128px;
+}
+.item1 img {
+  width: 100%;
+}
+
+.breadcrumb1 {
+  margin-top: 132px;
+  background: #e2e2e2;
+  padding: 15px 19px;
+  border-radius: 5px;
+}
+.item1 h3 {
+  font-size: 22px;
+  color: #353535;
+}
+.item1 {
+  padding: 0px 0px 24px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 25px;
+}
+.item1 h6 {
+  font-size: 14px;
+  color: rgb(73, 73, 73);
+}
+.item1 span {
+  font-size: 14px;
+  color: #000;
+}
+.item1 p {
+  font-size: 14px;
+  margin-top: 18px;
+  color: #686868;
+}
+.side-menu-img img {
+  width: 81%;
+  position: sticky;
+  top: 128px;
+}
+.copyright {
+  text-align: right;
+}
+.menu-items {
+  margin-top: 127px;
+}
+.side-menu-img {
+  text-align: right;
+}
+.item1 ul li {
+  list-style: none;
+  display: inline;
+}
+.item1 img {
+  width: 2.5%;
+  border-radius: none;
+  margin-top: 5px;
+  margin-right: 15px;
+}
+.item1 {
+  display: flex;
+  align-items: flex-start;
+}
+.nav-pills .nav-link {
+  background: 0 0;
+  border: 1px solid #eaeaea;
+  margin-bottom: 8px;
+}
+a.downloadmenu {
+  background: #ffc000;
+  color: #000;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
