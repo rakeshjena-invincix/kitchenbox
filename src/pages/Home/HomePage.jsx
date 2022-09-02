@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useEffect } from "react";
 import { IoFastFoodOutline } from "react-icons/io5";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import card1 from "../../assets/images/card1.svg";
@@ -39,9 +39,20 @@ import {
   AiOutlineShoppingCart,
 } from "react-icons/ai";
 import "./Home.css";
+import MyVerticallyCenteredModal from "../Login/MyVerticallyCenteredModal";
 const HomePage = () => {
+  const [modalShow, setModalShow] = React.useState(false);
+
+  useEffect(() => {
+    setModalShow(true);
+  }, []);
+
   return (
     <>
+      <MyVerticallyCenteredModal
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
       <section className="header">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
