@@ -100,18 +100,19 @@ const HomePage = () => {
           </div>
         </nav>
       </section>
-      <section style={{ marginTop: "72px" }}>
+      <section style={{ marginTop: "83px" }}>
         <div
           id="carouselExampleIndicators"
           className="carousel slide"
           data-bs-ride="carousel"
         >
           <div className="carousel-inner">
-            <div className="carousel-item active ">
-              <img
-                src={slider}
-                className=" w-100 d-none d-sm-block"
-                alt="..."
+            <div className="carousel-item active eventBannerContainer">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="form-control"
+                style={{ width: "50%", margin: "0px auto" }}
               />
             </div>
           </div>
