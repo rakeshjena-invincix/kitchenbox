@@ -84,9 +84,9 @@ const HomePage = () => {
                 <a className="nav-link " aria-current="page" href="#">
                   <AiOutlinePercentage /> Offers
                 </a>
-                <a className="nav-link" href="menu.html">
+                <Link to="/subscription" className="nav-link" href="menu.html">
                   <IoFastFoodOutline /> Kitchen Box
-                </a>
+                </Link>
               </div>
               <div className="navbar-nav">
                 <Link to="/" className="nav-link">
