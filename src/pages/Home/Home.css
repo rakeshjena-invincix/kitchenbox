@@ -330,6 +330,7 @@ a.downloadmenu {
 .card_img {
   /* position: relative; */
   color: #ffffff;
+  backdrop-filter: blur(10px) saturate(70%);
 }
 .card_text {
   position: relative;

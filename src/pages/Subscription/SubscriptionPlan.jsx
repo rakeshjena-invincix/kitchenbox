@@ -29,7 +29,7 @@ const SubscriptionPlan = () => {
       <section className="header">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
-            <a className="navbar-brand" href="#">
+            <a className="navbar-brand" href="/">
               <img
                 style={{ width: "40px", position: "", top: "" }}
                 src={logo}
