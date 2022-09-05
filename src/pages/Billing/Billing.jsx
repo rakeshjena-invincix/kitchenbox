@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import React from "react";
 import logo from "../../assets/images/logo.png";
 import veg from "../../assets/images/veg.png";
@@ -16,12 +17,19 @@ const Billing = () => {
                 {/* <img src={logo} width="10%" alt="logo" /> */}
 
                 <div className="header-elements ">
-                  <button type="button" className="btn btn-light btn-sm mx-3">
+                  <Button
+                    // variant="contained"
+                    size="small"
+                  >
                     Save
-                  </button>
-                  <button type="button" className="btn btn-light btn-sm ml-3">
+                  </Button>
+
+                  <Button
+                    // variant="contained"
+                    size="small"
+                  >
                     Print
-                  </button>
+                  </Button>
                 </div>
               </div>
 
@@ -171,12 +179,29 @@ const Billing = () => {
                     </div>
 
                     <div className="text-right mt-3">
-                      <button type="button" className="btn btn-outline-info">
+                      <Button
+                        variant="contained"
+                        size="small"
+                        style={{
+                          marginTop: "5px",
+                          backgroundColor: "#FFC727",
+                          borderRadius: "50px",
+                        }}
+                      >
                         Payment Option
-                      </button>{" "}
-                      <button type="button" className="btn btn-outline-primary">
-                        Send invoice
-                      </button>
+                      </Button>
+
+                      <Button
+                        variant="contained"
+                        size="small"
+                        style={{
+                          marginTop: "5px",
+                          backgroundColor: "#393E46",
+                          borderRadius: "50px",
+                        }}
+                      >
+                        Send Invoice
+                      </Button>
                     </div>
                   </div>
                 </div>

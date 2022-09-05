@@ -16,7 +16,6 @@ import order1 from "../../assets/images/order-1.svg";
 import order2 from "../../assets/images/order-2.svg";
 import order3 from "../../assets/images/order-3.svg";
 import order4 from "../../assets/images/order-4.svg";
-import slider from "../../assets/images/rajat-sarki-nnNCCQfSNsc-unsplash 1.png";
 import {
   default as todayspecial1,
   default as topselling1,
@@ -33,14 +32,15 @@ import topselling4 from "../../assets/images/top-selling-4.svg";
 import topselling5 from "../../assets/images/top-selling-5.svg";
 import veg from "../../assets/images/veg.png";
 
+import { Button } from "@mui/material";
 import {
   AiFillStar,
   AiOutlinePercentage,
   AiOutlineShoppingCart,
 } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import MyVerticallyCenteredModal from "../Login/MyVerticallyCenteredModal";
 import "./Home.css";
-import { Link } from "react-router-dom";
 const HomePage = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
@@ -292,7 +292,17 @@ const HomePage = () => {
                   <div className="price">
                     <p>₹ 250</p>
 
-                    <a href="#">Add</a>
+                    <Button
+                      variant="contained"
+                      size="small"
+                      style={{
+                        marginTop: "5px",
+                        backgroundColor: "#FFC727",
+                        borderRadius: "50px",
+                      }}
+                    >
+                      Add
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -334,7 +344,17 @@ const HomePage = () => {
                   <div className="price">
                     <p>₹ 150</p>
 
-                    <a href="#">Add</a>
+                    <Button
+                      variant="contained"
+                      size="small"
+                      style={{
+                        marginTop: "5px",
+                        backgroundColor: "#FFC727",
+                        borderRadius: "50px",
+                      }}
+                    >
+                      Add
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -376,7 +396,17 @@ const HomePage = () => {
                   <div className="price">
                     <p>₹ 200</p>
 
-                    <a href="#">Add</a>
+                    <Button
+                      variant="contained"
+                      size="small"
+                      style={{
+                        marginTop: "5px",
+                        backgroundColor: "#FFC727",
+                        borderRadius: "50px",
+                      }}
+                    >
+                      Add
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -418,7 +448,17 @@ const HomePage = () => {
                   <div className="price">
                     <p>₹ 250</p>
 
-                    <a href="#">Add</a>
+                    <Button
+                      variant="contained"
+                      size="small"
+                      style={{
+                        marginTop: "5px",
+                        backgroundColor: "#FFC727",
+                        borderRadius: "50px",
+                      }}
+                    >
+                      Add
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -460,7 +500,17 @@ const HomePage = () => {
                   <div className="price">
                     <p>₹ 150</p>
 
-                    <a href="#">Add</a>
+                    <Button
+                      variant="contained"
+                      size="small"
+                      style={{
+                        marginTop: "5px",
+                        backgroundColor: "#FFC727",
+                        borderRadius: "50px",
+                      }}
+                    >
+                      Add
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -502,7 +552,17 @@ const HomePage = () => {
                   <div className="price">
                     <p>₹ 200</p>
 
-                    <a href="#">Add</a>
+                    <Button
+                      variant="contained"
+                      size="small"
+                      style={{
+                        marginTop: "5px",
+                        backgroundColor: "#FFC727",
+                        borderRadius: "50px",
+                      }}
+                    >
+                      Add
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -544,7 +604,17 @@ const HomePage = () => {
                   <div className="price">
                     <p>₹ 250</p>
 
-                    <a href="#">Add</a>
+                    <Button
+                      variant="contained"
+                      size="small"
+                      style={{
+                        marginTop: "5px",
+                        backgroundColor: "#FFC727",
+                        borderRadius: "50px",
+                      }}
+                    >
+                      Add
+                    </Button>
                   </div>
                 </div>
               </div>
@@ -586,12 +656,32 @@ const HomePage = () => {
                   <div className="price">
                     <p>₹ 150</p>
 
-                    <a href="#">Add</a>
+                    <Button
+                      variant="contained"
+                      size="small"
+                      style={{
+                        marginTop: "5px",
+                        backgroundColor: "#FFC727",
+                        borderRadius: "50px",
+                      }}
+                    >
+                      Add
+                    </Button>
                   </div>
                 </div>
               </div>
               <div className="d-flex justify-content-center mt-5">
-                <button className="btn btn-warning w-25">See all</button>
+                <Button
+                  variant="contained"
+                  size="large"
+                  style={{
+                    marginTop: "5px",
+                    backgroundColor: "#FFC727",
+                    // borderRadius: "50px",
+                  }}
+                >
+                  See All
+                </Button>
               </div>
             </div>
           </div>
