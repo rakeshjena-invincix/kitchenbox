@@ -40,6 +40,7 @@ import {
 } from "react-icons/ai";
 import MyVerticallyCenteredModal from "../Login/MyVerticallyCenteredModal";
 import "./Home.css";
+import { Link } from "react-router-dom";
 const HomePage = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
@@ -88,13 +89,13 @@ const HomePage = () => {
                 </a>
               </div>
               <div className="navbar-nav">
-                <a href="#" className="nav-link">
+                <Link to="/" className="nav-link">
                   <MdOutlineAccountCircle /> Account
-                </a>
+                </Link>
 
-                <a href="#" className="nav-link">
+                <Link to="/billing" className="nav-link">
                   <AiOutlineShoppingCart /> Cart
-                </a>
+                </Link>
               </div>
             </div>
           </div>
