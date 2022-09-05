@@ -1,4 +1,5 @@
 // import { TextField } from "@mui/material";
+import { Button } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import { useState } from "react";
@@ -321,7 +322,7 @@ const AddRemoveInputField = () => {
                     // </button>
                     <AiFillDelete
                       onClick={removeInputFields}
-                      color="red"
+                      color="#EB1D36"
                       style={{
                         cursor: "pointer",
                         fontSize: "18px",
@@ -343,16 +344,19 @@ const AddRemoveInputField = () => {
               >
                 +
               </button> */}
-              <h4
-                onClick={addInputField}
-                color="green"
-                className="btn btn-sm btn-outline-success"
+
+              <Button
+                variant="contained"
+                size="small"
                 style={{
-                  cursor: "pointer",
+                  marginTop: "5px",
+                  backgroundColor: "#393E46",
+                  borderRadius: "50px",
                 }}
+                onClick={addInputField}
               >
                 Add Item
-              </h4>
+              </Button>
             </div>
           </div>
         </div>
