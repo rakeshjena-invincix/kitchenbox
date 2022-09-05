@@ -15,7 +15,6 @@ const AddRemoveInputField = ({ handlePrice }) => {
     },
   ]);
   const [selectedOptions, setSelectedOptions] = useState([]);
-
   const addInputField = () => {
     setInputFields([
       ...inputFields,

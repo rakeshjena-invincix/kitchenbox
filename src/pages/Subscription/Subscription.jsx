@@ -3,11 +3,15 @@ import { AiOutlinePercentage, AiOutlineShoppingCart } from "react-icons/ai";
 import { IoFastFoodOutline } from "react-icons/io5";
 import { MdOutlineAccountCircle } from "react-icons/md";
 import { Link } from "react-router-dom";
-import card1 from "../../assets/images/card1.svg";
-import card2 from "../../assets/images/card2.svg";
-import card3 from "../../assets/images/card3.svg";
-import card4 from "../../assets/images/card4.svg";
+
 import logo from "../../assets/images/logo.png";
+import card1 from "../../assets/images/Rectangle 35.png";
+import card2 from "../../assets/images/Rectangle 36.png";
+import card3 from "../../assets/images/Rectangle 37.png";
+import card4 from "../../assets/images/Rectangle 38.png";
+import card5 from "../../assets/images/Rectangle 39.png";
+import card6 from "../../assets/images/Rectangle 40.png";
+import addBtn from "../../assets/images/Vector.png";
 
 const Subscription = () => {
   return (
@@ -15,13 +19,13 @@ const Subscription = () => {
       <section className="header">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
-            <a className="navbar-brand" href="#">
+            <Link className="navbar-brand" to="/">
               <img
                 style={{ width: "40px", position: "", top: "" }}
                 src={logo}
                 alt=""
               />
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
@@ -72,35 +76,135 @@ const Subscription = () => {
 
         <div className="food-banner">
           <div className="container">
-            <div className="row g-2">
+            <div className="row">
+              <h2 className="text-center" style={{ fontSize: "32px" }}>
+                Meal Plans
+              </h2>
+
               <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="offercard1">
-                  <img src={card1} alt="" />
+                  <img src={card1} alt="" className="card_img" />
+                  <div className="card_text">
+                    <h3>Veg Only</h3>
+                    <p>
+                      Weekly Starting from - ₹ 1000 <br /> Monthly Starting from
+                      - ₹ 4000
+                    </p>
+                  </div>
+                  <div className="AddBtn">
+                    <Link to="#">
+                      <img
+                        style={{ width: "26.67px", height: "18.67px" }}
+                        src={addBtn}
+                        alt=""
+                      />
+                    </Link>
+                  </div>
                 </div>
               </div>
               <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="offercard1">
-                  <img src={card2} alt="" />
+                  <img src={card3} alt="" className="card_img" />
+                  <div className="card_text">
+                    <h3>Satvik (No Onion & Garlic)</h3>
+                    <p>
+                      Weekly Starting from - ₹ 1000 <br /> Monthly Starting from
+                      - ₹ 4000
+                    </p>
+                  </div>
+                  <div className="AddBtn">
+                    <Link to="#">
+                      <img
+                        style={{ width: "26.67px", height: "18.67px" }}
+                        src={addBtn}
+                        alt=""
+                      />
+                    </Link>
+                  </div>
                 </div>
               </div>
               <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="offercard1">
-                  <img src={card3} alt="" />
+                  <img src={card2} alt="" className="card_img" />
+                  <div className="card_text">
+                    <h3>Veg & Non-Veg Combo</h3>
+                    <p>
+                      Weekly Starting from - ₹ 1200 <br /> Monthly Starting from
+                      - ₹ 4800
+                    </p>
+                  </div>
+                  <div className="AddBtn">
+                    <Link to="#">
+                      <img
+                        style={{ width: "26.67px", height: "18.67px" }}
+                        src={addBtn}
+                        alt=""
+                      />
+                    </Link>
+                  </div>
                 </div>
               </div>
               <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="offercard1">
-                  <img src={card4} alt="" />
+                  <img src={card4} alt="" className="card_img" />
+                  <div className="card_text">
+                    <h3>Non-Veg Only</h3>
+                    <p>
+                      Weekly Starting from - ₹ 1400 <br /> Monthly Starting from
+                      - ₹ 5600
+                    </p>
+                  </div>
+                  <div className="AddBtn">
+                    <Link to="#">
+                      <img
+                        style={{ width: "26.67px", height: "18.67px" }}
+                        src={addBtn}
+                        alt=""
+                      />
+                    </Link>
+                  </div>
                 </div>
               </div>
               <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="offercard1">
-                  <img src={card4} alt="" />
+                  <img src={card6} alt="" className="card_img" />
+                  <div className="card_text">
+                    <h3>Odisha Special</h3>
+                    <p>
+                      Weekly Starting from - ₹ 1100 <br /> Monthly Starting from
+                      - ₹ 4400
+                    </p>
+                  </div>
+                  <div className="AddBtn">
+                    <Link to="#">
+                      <img
+                        style={{ width: "26.67px", height: "18.67px" }}
+                        src={addBtn}
+                        alt=""
+                      />
+                    </Link>
+                  </div>
                 </div>
               </div>
               <div className="col-md-4 col-sm-6 col-xs-12">
                 <div className="offercard1">
-                  <img src={card4} alt="" />
+                  <img src={card5} alt="" className="card_img" />
+                  <div className="card_text">
+                    <h3>North Indian Special</h3>
+                    <p>
+                      Weekly Starting from - ₹ 1300 <br /> Monthly Starting from
+                      - ₹ 5200
+                    </p>
+                  </div>
+                  <div className="AddBtn">
+                    <Link to="#">
+                      <img
+                        style={{ width: "26.67px", height: "18.67px" }}
+                        src={addBtn}
+                        alt=""
+                      />
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
