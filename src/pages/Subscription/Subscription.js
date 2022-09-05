@@ -1,7 +1,7 @@
 import React from "react";
 
 const Subscription = () => {
-  return <div>Subscription</div>;
+  return <></>;
 };
 
 export default Subscription;
