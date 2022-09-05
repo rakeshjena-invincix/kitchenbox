@@ -85,7 +85,7 @@ const Subscription = () => {
               </h2>
 
               <div className="col-md-4 col-sm-6 col-xs-12">
-                <div className="offercard1">
+                <div className="offercard_1">
                   <img src={card1} alt="" className="card_img" />
                   <div className="card_text">
                     <h3>Veg Only</h3>
@@ -106,7 +106,7 @@ const Subscription = () => {
                 </div>
               </div>
               <div className="col-md-4 col-sm-6 col-xs-12">
-                <div className="offercard1">
+                <div className="offercard_1">
                   <img src={card3} alt="" className="card_img" />
                   <div className="card_text">
                     <h3>Satvik (No Onion & Garlic)</h3>
@@ -127,7 +127,7 @@ const Subscription = () => {
                 </div>
               </div>
               <div className="col-md-4 col-sm-6 col-xs-12">
-                <div className="offercard1">
+                <div className="offercard_1">
                   <img src={card2} alt="" className="card_img" />
                   <div className="card_text">
                     <h3>Veg & Non-Veg Combo</h3>
@@ -148,7 +148,7 @@ const Subscription = () => {
                 </div>
               </div>
               <div className="col-md-4 col-sm-6 col-xs-12">
-                <div className="offercard1">
+                <div className="offercard_1">
                   <img src={card4} alt="" className="card_img" />
                   <div className="card_text">
                     <h3>Non-Veg Only</h3>
@@ -169,7 +169,7 @@ const Subscription = () => {
                 </div>
               </div>
               <div className="col-md-4 col-sm-6 col-xs-12">
-                <div className="offercard1">
+                <div className="offercard_1">
                   <img src={card6} alt="" className="card_img" />
                   <div className="card_text">
                     <h3>Odisha Special</h3>
@@ -190,7 +190,7 @@ const Subscription = () => {
                 </div>
               </div>
               <div className="col-md-4 col-sm-6 col-xs-12">
-                <div className="offercard1">
+                <div className="offercard_1">
                   <img src={card5} alt="" className="card_img" />
                   <div className="card_text">
                     <h3>North Indian Special</h3>
