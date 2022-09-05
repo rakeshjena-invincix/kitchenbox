@@ -96,13 +96,14 @@ const AddRemoveInputField = ({ handlePrice }) => {
             return (
               <div className="row my-3" key={index}>
                 <div className="col-11 d-flex ">
-                  <div
-                    className="form-group mx-3"
-                    style={{
-                      width: "100%",
-                    }}
-                  >
-                    {/* <input
+                  <div className="row">
+                    <div
+                      className="form-group col-sm-3 p-1 mx-3"
+                      // style={{
+                      //   width: "100%",
+                      // }}
+                    >
+                      {/* <input
                       type="text"
                       onChange={(event) => handleChange(index, event)}
                       value={dish}
@@ -111,35 +112,35 @@ const AddRemoveInputField = ({ handlePrice }) => {
                       placeholder="Enter Dish Name"
                       autoComplete="off"
                     /> */}
-                    <Autocomplete
-                      disablePortal
-                      id="dish"
-                      options={fakeDatas}
-                      onChange={(event, value) => setSelectedOptions(value)}
-                      isOptionEqualToValue={(option, value) =>
-                        option.label === value.label
-                      }
-                      // style={{ width: 100 }}
-                      renderInput={(params) => (
-                        <TextField
-                          {...params}
-                          id="dish"
-                          label="Dish"
-                          value={dish}
-                          style={{
-                            width: "100%",
-                          }}
-                        />
-                      )}
-                    />
-                  </div>
-                  <div
-                    className="form-group mx-3"
-                    style={{
-                      width: "100%",
-                    }}
-                  >
-                    {/* <input
+                      <Autocomplete
+                        disablePortal
+                        id="dish"
+                        options={fakeDatas}
+                        onChange={(event, value) => setSelectedOptions(value)}
+                        isOptionEqualToValue={(option, value) =>
+                          option.label === value.label
+                        }
+                        // style={{ width: 100 }}
+                        renderInput={(params) => (
+                          <TextField
+                            {...params}
+                            id="dish"
+                            label="Dish"
+                            value={dish}
+                            style={{
+                              width: "100%",
+                            }}
+                          />
+                        )}
+                      />
+                    </div>
+                    <div
+                      className="form-group col-sm-3 p-1  mx-3"
+                      // style={{
+                      //   width: "100%",
+                      // }}
+                    >
+                      {/* <input
                       type="price"
                       onChange={(event) => handleChange(index, event)}
                       value={price}
@@ -148,25 +149,25 @@ const AddRemoveInputField = ({ handlePrice }) => {
                       placeholder="Price"
                       autoComplete="off"
                     /> */}
-                    <TextField
-                      disabled
-                      id="price"
-                      label="Price"
-                      variant="outlined"
-                      type=""
-                      onChange={(event) => handleChange(index, event)}
-                      value={price}
-                      name="price"
-                      style={{ width: "100%" }}
-                    />
-                  </div>
-                  <div
-                    className="form-group mx-3"
-                    style={{
-                      width: "100%",
-                    }}
-                  >
-                    {/* <input
+                      <TextField
+                        disabled
+                        id="price"
+                        label="Price"
+                        variant="outlined"
+                        type=""
+                        onChange={(event) => handleChange(index, event)}
+                        value={price}
+                        name="price"
+                        // style={{ width: "100%" }}
+                      />
+                    </div>
+                    <div
+                      className="form-group col-sm-2 p-1  mx-3"
+                      // style={{
+                      //   width: "100%",
+                      // }}
+                    >
+                      {/* <input
                       type="number"
                       onChange={(event) => handleChange(index, event)}
                       value={quantity}
@@ -175,25 +176,27 @@ const AddRemoveInputField = ({ handlePrice }) => {
                       placeholder="Quantity"
                       autoComplete="off"
                     /> */}
-                    <TextField
-                      id="quantity"
-                      label="Quantity"
-                      variant="outlined"
-                      type="number"
-                      onChange={(event) => handleChange(index, event)}
-                      value={quantity}
-                      name="quantity"
-                      style={{ width: "100%" }}
-                    />
-                  </div>
+                      <TextField
+                        id="quantity"
+                        label="Quantity"
+                        variant="outlined"
+                        type="number"
+                        onChange={(event) => handleChange(index, event)}
+                        value={quantity}
+                        name="quantity"
+                        // style={{ width: "100%" }}
+                      />
+                    </div>
 
-                  <div
-                    className="form-group mx-3"
-                    style={{
-                      width: "100%",
-                    }}
-                  >
-                    {/* <input
+                    <div
+                      className="form-group col-sm-2 p-1  mx-3"
+                      style={
+                        {
+                          // width: "100%",
+                        }
+                      }
+                    >
+                      {/* <input
                       type="number"
                       onChange={(event) => handleChange(index, event)}
                       value={total}
@@ -203,17 +206,18 @@ const AddRemoveInputField = ({ handlePrice }) => {
                       autoComplete="off"
                       disabled
                     /> */}
-                    <TextField
-                      disabled
-                      id="total"
-                      label="Total"
-                      variant="outlined"
-                      type="number"
-                      // onChange={(event) => handleChange(index, event)}
-                      value={price * quantity}
-                      name="total"
-                      style={{ width: "100%" }}
-                    />
+                      <TextField
+                        disabled
+                        id="total"
+                        label="Total"
+                        variant="outlined"
+                        type="number"
+                        // onChange={(event) => handleChange(index, event)}
+                        value={price * quantity}
+                        name="total"
+                        // style={{ width: "100%" }}
+                      />
+                    </div>
                   </div>
                 </div>
                 <div className="col-1">

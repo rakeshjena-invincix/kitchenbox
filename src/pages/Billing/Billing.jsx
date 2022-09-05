@@ -1,5 +1,6 @@
 import { Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 
 import AddRemoveInputField from "../../components/AddRemoveInputField/AddRemoveInputField";
@@ -50,7 +51,9 @@ const Billing = () => {
                 <div className="row d-flex justify-content-between">
                   <div className="col-md-3">
                     <div className="mb-4 pull-left">
-                      <img src={logo} width="40%" alt="logo" />
+                      <Link to="/">
+                        <img src={logo} width="40%" alt="logo" />
+                      </Link>
                     </div>
                   </div>
 
@@ -87,19 +90,19 @@ const Billing = () => {
               </div>
 
               <div className="table-responsive">
-                <table className="table table-lg">
+                {/* <table className="table table-lg">
                   <tbody>
                     <tr>
-                      <td>
-                        <AddRemoveInputField handlePrice={handlePrice} />
-                      </td>
+                      <td> */}
+                <AddRemoveInputField handlePrice={handlePrice} />
+                {/* </td>
                     </tr>
                   </tbody>
-                </table>
+                </table> */}
               </div>
 
-              <div className="card-body d-flex justify-content-between">
-                <div className="d-md-flex">
+              <div className="card-body d-flex justify-content-between row">
+                <div className="d-md-flex col-sm-6">
                   <div className="pt-2 mb-3 wmin-md-400 ml-auto">
                     {/* <h6 className="mb-3 text-left">Item Total</h6> */}
                     <div className="table-responsive">
@@ -130,17 +133,20 @@ const Billing = () => {
                     </div>
                   </div>
                 </div>
-                <div className="d-md-flex">
+                <div className="d-md-flex col-sm-6">
                   <div className="pt-2 mb-3 wmin-md-400 ml-auto">
                     {items.map((value, i) => (
                       <>
-                        <div className="d-flex justify-content-between fw-bold">
+                        <div
+                          key={i}
+                          className="d-flex justify-content-between fw-bold"
+                        >
                           <span className="mb-3 text-start ">
                             {/* <img
                               src={value.dish == "Chicken" ? nonVeg : veg}
                               width="15"
                             />{" "} */}
-                            {value.dish} &#8377; -{value.price} x{" "}
+                            {value.dish} -&#8377;{value.price} x{" "}
                             {value.quantity}
                           </span>
                           <span className=" text-end">

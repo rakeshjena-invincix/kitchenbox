@@ -1,7 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect } from "react";
-import { IoFastFoodOutline } from "react-icons/io5";
-import { MdOutlineAccountCircle } from "react-icons/md";
 import card1 from "../../assets/images/card1.svg";
 import card2 from "../../assets/images/card2.svg";
 import card3 from "../../assets/images/card3.svg";
@@ -9,7 +7,6 @@ import card4 from "../../assets/images/card4.svg";
 import dishes1 from "../../assets/images/dishes-1.svg";
 import dishes2 from "../../assets/images/dishes-2.svg";
 import dishes3 from "../../assets/images/dishes-3.svg";
-import logo from "../../assets/images/logo.png";
 import menuImage from "../../assets/images/menu-img.svg";
 import NonVeg from "../../assets/images/non-veg.png";
 import order1 from "../../assets/images/order-1.svg";
@@ -33,12 +30,9 @@ import topselling5 from "../../assets/images/top-selling-5.svg";
 import veg from "../../assets/images/veg.png";
 
 import { Button } from "@mui/material";
-import {
-  AiFillStar,
-  AiOutlinePercentage,
-  AiOutlineShoppingCart,
-} from "react-icons/ai";
+import { AiFillStar } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import Navbar from "../../components/AddRemoveInputField/Navbar";
 import MyVerticallyCenteredModal from "../Login/MyVerticallyCenteredModal";
 import "./Home.css";
 const HomePage = () => {
@@ -54,54 +48,8 @@ const HomePage = () => {
         show={modalShow}
         onHide={() => setModalShow(false)}
       />
-      <section className="header">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <div className="container">
-            <Link className="navbar-brand" to="/">
-              <img
-                style={{ width: "40px", position: "", top: "" }}
-                src={logo}
-                alt=""
-              />
-            </Link>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              style={{ justifyContent: "flex-end" }}
-              id="navbarNavAltMarkup"
-            >
-              <div className="navbar-nav">
-                <a className="nav-link " aria-current="page" href="#">
-                  <AiOutlinePercentage /> Offers
-                </a>
-                <Link to="/subscription" className="nav-link" href="menu.html">
-                  <IoFastFoodOutline /> Kitchen Box
-                </Link>
-              </div>
-              <div className="navbar-nav">
-                <Link to="/" className="nav-link">
-                  <MdOutlineAccountCircle /> Account
-                </Link>
-
-                <Link to="/billing" className="nav-link">
-                  <AiOutlineShoppingCart /> Cart
-                </Link>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </section>
-      <section style={{ marginTop: "83px" }}>
+      <Navbar />
+      <section style={{ marginTop: "70px" }}>
         <div
           id="carouselExampleIndicators"
           className="carousel slide"
@@ -195,9 +143,11 @@ const HomePage = () => {
               </div>
 
               <div className="col-md-3 col-sm-6 col-xs-12">
-                <div className="allorder-1">
-                  <img src={order2} alt="" />
-                </div>
+                <Link to="/subscription">
+                  <div className="allorder-1">
+                    <img src={order2} alt="" />
+                  </div>
+                </Link>
               </div>
 
               <div className="col-md-3 col-sm-6 col-xs-12">
@@ -690,7 +640,12 @@ const HomePage = () => {
       <section>
         <div className="container">
           <div className="d-flex justify-content-center mb-5">
-            <img className="img-fluid" src={menuImage} alt="menuImage" />
+            <img
+              className="img-fluid"
+              src={menuImage}
+              alt="menuImage"
+              width={"500px"}
+            />
           </div>
         </div>
       </section>

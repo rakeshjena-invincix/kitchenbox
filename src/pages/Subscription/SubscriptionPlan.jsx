@@ -8,11 +8,8 @@ import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import React from "react";
-import { AiOutlinePercentage, AiOutlineShoppingCart } from "react-icons/ai";
-import { IoFastFoodOutline } from "react-icons/io5";
-import { MdOutlineAccountCircle } from "react-icons/md";
-import { Link } from "react-router-dom";
-import logo from "../../assets/images/logo.png";
+import subscriptionBanner from "../../assets/images/Meal Subscription 1.png";
+import Navbar from "../../components/AddRemoveInputField/Navbar";
 import "./../Home/Home.css";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -26,53 +23,7 @@ const Item = styled(Paper)(({ theme }) => ({
 const SubscriptionPlan = () => {
   return (
     <>
-      <section className="header">
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-          <div className="container">
-            <a className="navbar-brand" href="/">
-              <img
-                style={{ width: "40px", position: "", top: "" }}
-                src={logo}
-                alt=""
-              />
-            </a>
-            <button
-              className="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarNavAltMarkup"
-              aria-controls="navbarNavAltMarkup"
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-            >
-              <span className="navbar-toggler-icon"></span>
-            </button>
-            <div
-              className="collapse navbar-collapse"
-              style={{ justifyContent: "flex-end" }}
-              id="navbarNavAltMarkup"
-            >
-              <div className="navbar-nav">
-                <a className="nav-link " aria-current="page" href="#">
-                  <AiOutlinePercentage /> Offers
-                </a>
-                <Link to="/subscription" className="nav-link" href="menu.html">
-                  <IoFastFoodOutline /> Kitchen Box
-                </Link>
-              </div>
-              <div className="navbar-nav">
-                <Link to="/" className="nav-link">
-                  <MdOutlineAccountCircle /> Account
-                </Link>
-
-                <Link to="/billing" className="nav-link">
-                  <AiOutlineShoppingCart /> Cart
-                </Link>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </section>
+      <Navbar />
       <section className="container" style={{ marginTop: "83px" }}>
         <div
           id="carouselExampleIndicators"
@@ -80,14 +31,26 @@ const SubscriptionPlan = () => {
           data-bs-ride="carousel"
         >
           <div className="carousel-inner">
-            <div className="carousel-item active subscriptionBanner"></div>
+            <div className="carousel-item active">
+              <img
+                src={subscriptionBanner}
+                className="w-100 d-none d-sm-block"
+                alt="..."
+              />
+              <img
+                src={subscriptionBanner}
+                className="d-block w-100 d-sm-none"
+                alt="..."
+              />
+            </div>
           </div>
         </div>
-        <h6 className="text-center mt-3 mb-3">Veg Only</h6>
+
+        <h6 className="text-center mt-3 ">Veg Only</h6>
         <div className="row d-flex justify-content-center mb-5">
-          <div className="col-6">
+          <div className="col-sm-12 col-md-6">
             <div>
-              <p className="fw-bold">Meals</p>
+              <p className="fw-bold pt-3">Meals</p>
             </div>
             <div>
               <Accordion>
@@ -207,9 +170,9 @@ const SubscriptionPlan = () => {
               </Accordion>
             </div>
           </div>
-          <div className="col-6">
+          <div className="col-sm-12 col-md-6">
             <div>
-              <p className="fw-bold">Customization</p>
+              <p className="fw-bold pt-3">Customization</p>
             </div>
             <div className="mb-3 mt-3">
               <p className="">Select Days:</p>
