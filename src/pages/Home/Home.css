@@ -3,9 +3,6 @@ a.nav-link {
   font-weight: 500;
   font-size: 17px;
 }
-.offercard1 {
-  margin-bottom: -82px;
-}
 .offercard1 img {
   width: 100%;
 }
@@ -333,6 +330,7 @@ a.downloadmenu {
 .card_img {
   /* position: relative; */
   color: #ffffff;
+  backdrop-filter: blur(10px) saturate(70%);
 }
 .card_text {
   position: relative;
@@ -353,4 +351,10 @@ a.downloadmenu {
   position: relative;
   top: -128px;
   left: 290px;
+}
+.offercard_1 {
+  margin-bottom: -82px;
+}
+.offercard_1 img {
+  width: 100%;
 }

@@ -1,10 +1,13 @@
 import React from "react";
-import { AiOutlinePercentage, AiOutlineShoppingCart } from "react-icons/ai";
-import { IoFastFoodOutline } from "react-icons/io5";
-import { MdOutlineAccountCircle } from "react-icons/md";
-import { Link } from "react-router-dom";
-
 import logo from "../../assets/images/logo.png";
+import {
+  AiFillStar,
+  AiOutlinePercentage,
+  AiOutlineShoppingCart,
+} from "react-icons/ai";
+import { IoFastFoodOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
+import { MdOutlineAccountCircle } from "react-icons/md";
 import card1 from "../../assets/images/Rectangle 35.png";
 import card2 from "../../assets/images/Rectangle 36.png";
 import card3 from "../../assets/images/Rectangle 37.png";
@@ -46,9 +49,9 @@ const Subscription = () => {
                 <a className="nav-link " aria-current="page" href="#">
                   <AiOutlinePercentage /> Offers
                 </a>
-                <Link to="/subscription" className="nav-link" href="menu.html">
+                <a className="nav-link" href="menu.html">
                   <IoFastFoodOutline /> Kitchen Box
-                </Link>
+                </a>
               </div>
               <div className="navbar-nav">
                 <Link to="/" className="nav-link">
