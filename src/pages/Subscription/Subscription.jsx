@@ -1,13 +1,10 @@
 import React from "react";
-import logo from "../../assets/images/logo.png";
-import {
-  AiFillStar,
-  AiOutlinePercentage,
-  AiOutlineShoppingCart,
-} from "react-icons/ai";
+import { AiOutlinePercentage, AiOutlineShoppingCart } from "react-icons/ai";
 import { IoFastFoodOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
 import { MdOutlineAccountCircle } from "react-icons/md";
+import { Link } from "react-router-dom";
+
+import logo from "../../assets/images/logo.png";
 import card1 from "../../assets/images/Rectangle 35.png";
 import card2 from "../../assets/images/Rectangle 36.png";
 import card3 from "../../assets/images/Rectangle 37.png";
