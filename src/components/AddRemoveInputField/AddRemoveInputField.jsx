@@ -15,6 +15,7 @@ const AddRemoveInputField = () => {
     },
   ]);
   const [selectedOptions, setSelectedOptions] = useState([]);
+  console.log("===>", selectedOptions);
   const [total, setTotal] = useState(0);
   const addInputField = () => {
     setInputFields([

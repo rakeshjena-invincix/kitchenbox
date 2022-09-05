@@ -57,13 +57,13 @@ const HomePage = () => {
       <section className="header">
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <div className="container">
-            <a className="navbar-brand" href="#">
+            <Link className="navbar-brand" to="/">
               <img
                 style={{ width: "40px", position: "", top: "" }}
                 src={logo}
                 alt=""
               />
-            </a>
+            </Link>
             <button
               className="navbar-toggler"
               type="button"
