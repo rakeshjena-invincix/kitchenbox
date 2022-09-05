@@ -1,17 +1,13 @@
 import React from "react";
-import logo from "../../assets/images/logo.png";
-import {
-  AiFillStar,
-  AiOutlinePercentage,
-  AiOutlineShoppingCart,
-} from "react-icons/ai";
+import { AiOutlinePercentage, AiOutlineShoppingCart } from "react-icons/ai";
 import { IoFastFoodOutline } from "react-icons/io5";
-import { Link } from "react-router-dom";
 import { MdOutlineAccountCircle } from "react-icons/md";
+import { Link } from "react-router-dom";
 import card1 from "../../assets/images/card1.svg";
 import card2 from "../../assets/images/card2.svg";
 import card3 from "../../assets/images/card3.svg";
 import card4 from "../../assets/images/card4.svg";
+import logo from "../../assets/images/logo.png";
 
 const Subscription = () => {
   return (

@@ -1,0 +1,35 @@
+[
+  {
+    "item_id": 101,
+    "item_category": "veg",
+    "item_title": "paneer butter masala",
+    "item_price": 159,
+    "item_quantity": 300,
+    "item_metric": "gram",
+    "item_description": "soft paneer with mouth melting spices in butter",
+    "container_type": "300 gram plastic round",
+    "cooking_style": "Punjabi Special"
+  },
+  {
+    "item_id": 102,
+    "item_category": "non-veg",
+    "item_title": "chicken butter masala",
+    "item_price": 189,
+    "item_quantity": 500,
+    "item_metric": "gram",
+    "item_description": "boneless chicken with mouth melting spices in butter",
+    "container_type": "300 gram plastic round",
+    "cooking_style": "Punjabi Special"
+  },
+  {
+    "item_id": 103,
+    "item_category": "non-veg",
+    "item_title": "chicken alu curry",
+    "item_price": 179,
+    "item_quantity": 500,
+    "item_metric": "ml",
+    "item_description": "4 pc chicken with 2 pcs alu curry",
+    "container_type": "300 gram plastic round",
+    "cooking_style": "Odisha Special"
+  }
+]
