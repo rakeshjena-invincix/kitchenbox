@@ -11,10 +11,10 @@ import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
 import Modal from "react-bootstrap/Modal";
 import subscriptionBanner from "../../assets/images/Meal Subscription 1.png";
-import Navbar from "../../components/AddRemoveInputField/Navbar";
-import "./../Home/Home.css";
 import card1 from "../../assets/images/Rectangle 73.png";
 import card2 from "../../assets/images/Rectangle 76.png";
+import Navbar from "../../components/AddRemoveInputField/Navbar";
+import "./../Home/Home.css";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#FFC727",
@@ -119,7 +119,12 @@ const SubscriptionPlan = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography className="d-flex justify-content-start align-items-center">
-                    <img src={card1} style={{ width: "150px" }} />
+                    <div style={{ position: "relative" }}>
+                      <img src={card1} style={{ width: "150px" }} />
+                      <div className="bottom_text">
+                        <p>Dinner</p>
+                      </div>
+                    </div>
                     <div>
                       <h4
                         className="ms-3"
@@ -157,7 +162,12 @@ const SubscriptionPlan = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography className="d-flex justify-content-start align-items-center">
-                    <img src={card2} style={{ width: "150px" }} />
+                    <div style={{ position: "relative" }}>
+                      <img src={card2} style={{ width: "150px" }} />
+                      <div className="bottom_text">
+                        <p>Lunch</p>
+                      </div>
+                    </div>
                     <div>
                       <h4
                         className="ms-3"
@@ -195,7 +205,12 @@ const SubscriptionPlan = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography className="d-flex justify-content-start align-items-center">
-                    <img src={card1} style={{ width: "150px" }} />
+                    <div style={{ position: "relative" }}>
+                      <img src={card1} style={{ width: "150px" }} />
+                      <div className="bottom_text">
+                        <p>Dinner</p>
+                      </div>
+                    </div>
                     <div>
                       <h4
                         className="ms-3"
@@ -233,7 +248,12 @@ const SubscriptionPlan = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography className="d-flex justify-content-start align-items-center">
-                    <img src={card2} style={{ width: "150px" }} />
+                    <div style={{ position: "relative" }}>
+                      <img src={card2} style={{ width: "150px" }} />
+                      <div className="bottom_text">
+                        <p>Lunch</p>
+                      </div>
+                    </div>
                     <div>
                       <h4
                         className="ms-3"
@@ -271,7 +291,12 @@ const SubscriptionPlan = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography className="d-flex justify-content-start align-items-center">
-                    <img src={card1} style={{ width: "150px" }} />
+                    <div style={{ position: "relative" }}>
+                      <img src={card1} style={{ width: "150px" }} />
+                      <div className="bottom_text">
+                        <p>Dinner</p>
+                      </div>
+                    </div>
                     <div>
                       <h4
                         className="ms-3"
@@ -309,7 +334,12 @@ const SubscriptionPlan = () => {
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography className="d-flex justify-content-start align-items-center">
-                    <img src={card2} style={{ width: "150px" }} />
+                    <div style={{ position: "relative" }}>
+                      <img src={card2} style={{ width: "150px" }} />
+                      <div className="bottom_text">
+                        <p>Lunch</p>
+                      </div>
+                    </div>
                     <div>
                       <h4
                         className="ms-3"
@@ -401,7 +431,16 @@ const SubscriptionPlan = () => {
         <Modal.Header closeButton>
           <Modal.Title>Summary</Modal.Title>
         </Modal.Header>
-        <Modal.Body></Modal.Body>
+        <Modal.Body>
+          <div className="container">
+            <div className="row">
+              <p className="">Meals:</p>
+
+              <div className="col-6"></div>
+              <div className="col-6"></div>
+            </div>
+          </div>
+        </Modal.Body>
       </Modal>
     </>
   );

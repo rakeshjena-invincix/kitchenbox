@@ -29,107 +29,121 @@ const MyVerticallyCenteredModal = (props) => {
     >
       <Modal.Header closeButton></Modal.Header>
       <Modal.Body style={{ marginLeft: "20px" }}>
-        <img
-          src="./Login2.png"
-          width={200}
-          height={200}
-          alt="login"
-          className="img-fluid"
-        />
-        <h5 className="" style={{ fontSize: "18px", fontWeight: "300" }}>
-          Welcome to
-          <br />
-        </h5>
-        <h5 className="pb-3">
-          <span style={{ fontWeight: "800", fontSize: "22px" }}>
-            Kitchen Box
-          </span>
-        </h5>
-        {show ? (
-          <>
-            <TextField
-              inputProps={{
-                style: TextFieldStyle,
-              }}
-              // id="outlined-number"
-              label="Enter Your Mobile Number"
-              type="text"
-              InputLabelProps={{
-                shrink: true,
-              }}
-              className="pb-3"
-            />
-            <Button
-              variant="contained"
-              style={{
-                marginTop: "5px",
-                backgroundColor: "#FFC727",
-                borderRadius: "50px",
-              }}
-              onClick={openOtpFunc}
-            >
-              Send OTP
-            </Button>
-            <p
-              className="pt-3"
-              style={{ textAlign: "center", fontSize: "8px", marginTop: "4px" }}
-            >
-              By clicking on login, I accept all the terms and conditions
-            </p>
-          </>
-        ) : (
-          <>
-            <div style={{ position: "relative" }}>
-              <OtpInput
-                value={otp}
-                onChange={(e) => handleChange(e)}
-                numInputs={4}
-                style={{ width: "2rem" }}
-                inputStyle={{ width: "3rem", marginLeft: "5px" }}
-              />
+        <div className="container">
+          <img
+            src="./Login2.png"
+            width={200}
+            height={200}
+            alt="login"
+            className="img-fluid"
+          />
+          <h5 className="" style={{ fontSize: "18px", fontWeight: "300" }}>
+            Welcome to
+            <br />
+          </h5>
+          <h5 className="pb-3">
+            <span style={{ fontWeight: "800", fontSize: "22px" }}>
+              Kitchen Box
+            </span>
+          </h5>
+          {show ? (
+            <div className="row">
+              <div>
+                <TextField
+                  inputProps={{
+                    style: TextFieldStyle,
+                  }}
+                  // id="outlined-number"
+                  label="Enter Your Mobile Number"
+                  type="text"
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                  className="pb-3"
+                />
+              </div>
+              <div>
+                <Button
+                  variant="contained"
+                  style={{
+                    marginTop: "5px",
+                    backgroundColor: "#FFC727",
+                    borderRadius: "50px",
+                  }}
+                  onClick={openOtpFunc}
+                >
+                  Send OTP
+                </Button>
+              </div>
               <p
+                className="pt-3"
                 style={{
-                  textAlign: "left",
+                  textAlign: "center",
                   fontSize: "8px",
                   marginTop: "4px",
                 }}
               >
-                OTP has been sent to your mobile number
+                By clicking on login, I accept all the terms and conditions
               </p>
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "flex-end",
-                  flexDirection: "column",
-                  position: "absolute",
-                  top: "62px",
-                  right: "4px",
-                }}
-              >
-                <a>resend OTP</a>
-                <span>Time left : 53 sec</span>
-              </div>
             </div>
-            <a href="/">
-              <Button
-                variant="contained"
+          ) : (
+            <>
+              <div style={{ position: "relative" }}>
+                <OtpInput
+                  value={otp}
+                  onChange={(e) => handleChange(e)}
+                  numInputs={4}
+                  style={{ width: "2rem" }}
+                  inputStyle={{ width: "2.5rem", marginLeft: "5px" }}
+                />
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontSize: "8px",
+                    marginTop: "4px",
+                  }}
+                >
+                  OTP has been sent to your mobile number
+                </p>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "flex-end",
+                    flexDirection: "column",
+                    position: "absolute",
+                    top: "62px",
+                    right: "4px",
+                  }}
+                >
+                  <a>resend OTP</a>
+                  <span>Time left : 53 sec</span>
+                </div>
+              </div>
+              <a href="/">
+                <Button
+                  variant="contained"
+                  style={{
+                    marginTop: "5px",
+                    backgroundColor: "#FFC727",
+                    borderRadius: "50px",
+                  }}
+                >
+                  Login
+                </Button>
+              </a>
+              <p
+                className="pt-3"
                 style={{
-                  marginTop: "5px",
-                  backgroundColor: "#FFC727",
-                  borderRadius: "50px",
+                  textAlign: "center",
+                  fontSize: "8px",
+                  marginTop: "4px",
                 }}
               >
-                Login
-              </Button>
-            </a>
-            <p
-              className="pt-3"
-              style={{ textAlign: "center", fontSize: "8px", marginTop: "4px" }}
-            >
-              By clicking on login, I accept all the terms and conditions
-            </p>
-          </>
-        )}
+                By clicking on login, I accept all the terms and conditions
+              </p>
+            </>
+          )}
+        </div>
       </Modal.Body>
     </Modal>
   );

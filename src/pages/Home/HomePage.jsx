@@ -1,5 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { Button } from "@mui/material";
 import React, { useEffect } from "react";
+import { AiFillStar } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import card1 from "../../assets/images/card1.svg";
 import card2 from "../../assets/images/card2.svg";
 import card3 from "../../assets/images/card3.svg";
@@ -28,10 +31,6 @@ import {
 import topselling4 from "../../assets/images/top-selling-4.svg";
 import topselling5 from "../../assets/images/top-selling-5.svg";
 import veg from "../../assets/images/veg.png";
-
-import { Button } from "@mui/material";
-import { AiFillStar } from "react-icons/ai";
-import { Link } from "react-router-dom";
 import Navbar from "../../components/AddRemoveInputField/Navbar";
 import MyVerticallyCenteredModal from "../Login/MyVerticallyCenteredModal";
 import "./Home.css";
