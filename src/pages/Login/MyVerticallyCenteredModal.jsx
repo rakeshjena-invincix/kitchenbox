@@ -5,14 +5,13 @@ import Modal from "react-bootstrap/Modal";
 import OtpInput from "react-otp-input";
 
 const MyVerticallyCenteredModal = (props) => {
-  const [show, setshow] = React.useState(true);
-  const [otp, setotp] = React.useState("");
+  const [show, setShow] = React.useState(true);
+  const [otp, setOtp] = React.useState("");
   const openOtpFunc = () => {
-    setshow(!show);
+    setShow(!show);
   };
   const handleChange = (otp) => {
-    console.log(otp);
-    setotp(otp);
+    setOtp(otp);
   };
 
   const TextFieldStyle = {

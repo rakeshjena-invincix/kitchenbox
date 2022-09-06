@@ -14,9 +14,7 @@ const Billing = () => {
   };
   useEffect(() => {
     let total = 0;
-    const totalValue = items.map((val) => {
-      total += val.price * val.quantity;
-    });
+    const totalValue = items.map((val) => (total += val.price * val.quantity));
     setTotalPrice(total);
   }, [items]);
 
@@ -143,14 +141,15 @@ const Billing = () => {
                         >
                           <span className="mb-3 text-start ">
                             {/* <img
-                              src={value.dish == "Chicken" ? nonVeg : veg}
+                              src={`../../assets/images/${value.item_category}.png`}
+                              alt=""
                               width="15"
-                            />{" "} */}
-                            {value.dish} -&#8377;{value.price} x{" "}
-                            {value.quantity}
+                            /> */}
+                            {value.dish} x {value.quantity}(
+                            {value.item_quantity} {value.item_metric})
                           </span>
                           <span className=" text-end">
-                            &#8377;{value.price * value.quantity}
+                            &#8377;{value.price}
                           </span>
                         </div>
                       </>

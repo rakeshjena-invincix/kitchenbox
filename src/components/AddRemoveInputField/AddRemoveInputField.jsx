@@ -11,6 +11,9 @@ const AddRemoveInputField = ({ handlePrice }) => {
       dish: "",
       price: "",
       quantity: "",
+      item_category: "",
+      item_quantity: 0,
+      item_metric: "",
       total: "",
     },
   ]);
@@ -22,6 +25,9 @@ const AddRemoveInputField = ({ handlePrice }) => {
         dish: "",
         price: "",
         quantity: "",
+        item_category: "",
+        item_quantity: 0,
+        item_metric: "",
         total: "",
       },
     ]);
@@ -38,6 +44,10 @@ const AddRemoveInputField = ({ handlePrice }) => {
 
     list[index]["dish"] = selectedOptions.label;
     list[index]["price"] = selectedOptions.item_price;
+    list[index][" item_category"] = selectedOptions.item_category;
+    list[index]["item_quantity"] = selectedOptions.item_quantity;
+    list[index]["item_metric"] = selectedOptions.item_metric;
+    list[index]["total"] = selectedOptions.total;
     list[index][name] = value;
     console.log(list);
     setInputFields(list);
@@ -78,13 +88,33 @@ const AddRemoveInputField = ({ handlePrice }) => {
       container_type: "300 gram plastic round",
       cooking_style: "Odisha Special",
     },
-    { label: "French Toast", item_price: 69 },
-    { label: "Tomato Onion Omelette With Butter Toast", item_price: 69 },
-    { label: "Spinach Omelette With Butter Toast", item_price: 79 },
-    { label: "Boiled Egg With Butter Toast", item_price: 79 },
-    { label: "Chilli Cheese Toast", item_price: 79 },
-    { label: "Cheese Omelette With Butter Toast", item_price: 99 },
-    { label: "Veg Hot And Sour Soup", item_price: 79 },
+    { label: "French Toast", item_price: 69, item_category: "veg" },
+    {
+      label: "Tomato Onion Omelette With Butter Toast",
+      item_price: 69,
+      item_category: "non-veg",
+    },
+    {
+      label: "Spinach Omelette With Butter Toast",
+      item_price: 79,
+      item_category: "non-veg",
+    },
+    {
+      label: "Boiled Egg With Butter Toast",
+      item_price: 79,
+      item_category: "non-veg",
+    },
+    { label: "Chilli Cheese Toast", item_price: 79, item_category: "veg" },
+    {
+      label: "Cheese Omelette With Butter Toast",
+      item_price: 99,
+      item_category: "non-veg",
+    },
+    {
+      label: "Veg Hot And Sour Soup",
+      item_price: 79,
+      item_category: "veg",
+    },
   ];
 
   return (
@@ -154,7 +184,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                         id="price"
                         label="Price"
                         variant="outlined"
-                        type=""
+                        type="text"
                         onChange={(event) => handleChange(index, event)}
                         value={price}
                         name="price"
@@ -184,6 +214,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                         onChange={(event) => handleChange(index, event)}
                         value={quantity}
                         name="quantity"
+                        minRows={0}
                         // style={{ width: "100%" }}
                       />
                     </div>
