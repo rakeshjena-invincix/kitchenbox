@@ -330,15 +330,24 @@ a.downloadmenu {
 .card_img {
   /* position: relative; */
   color: #ffffff;
-  backdrop-filter: blur(10px) saturate(70%);
+  /* backdrop-filter: blur(10px) saturate(70%); */
 }
 .card_text {
-  position: relative;
-  bottom: 83px;
-  left: 8px;
   color: white;
   padding-left: 20px;
   padding-right: 20px;
+  position: absolute;
+  z-index: 999;
+  bottom: 0;
+  width: 100%;
+  padding: 48px 19px 10px;
+  background: linear-gradient(
+    180deg,
+    rgb(0 0 0 / 0%) 0%,
+    rgb(0 0 0 / 27%) 20%,
+    rgb(0 0 0 / 64%) 76%,
+    rgb(0 0 0) 100%
+  );
 }
 .card_text h3 {
   font-weight: 900;
@@ -352,9 +361,46 @@ a.downloadmenu {
   /* top: -155px;
   left: 5px; */
 }
-.offercard_1 {
+/* .offercard_1 {
   margin-bottom: -82px;
-}
+} */
 .offercard_1 img {
   width: 100%;
+}
+.offercard_1 {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+/* .offercard_1 :before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #0000005c;
+  position: absolute;
+  border-radius: 13px;
+  background: linear-gradient(
+    185deg,
+    rgb(2 0 36 / 0%) 0%,
+    rgb(0 0 0 / 0%) 20%,
+    rgb(0 0 0 / 25%) 59%,
+    rgb(0 0 0) 100%
+  );
+} */
+
+hr {
+  width: 5%;
+  margin: 12px auto;
+  height: 4px;
+  background: #ffc300;
+  opacity: 1;
+  border-top: 0;
+}
+.bottom_text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: #00000069;
+  color: #ffffff;
 }

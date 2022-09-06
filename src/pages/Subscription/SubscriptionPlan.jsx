@@ -13,6 +13,8 @@ import Modal from "react-bootstrap/Modal";
 import subscriptionBanner from "../../assets/images/Meal Subscription 1.png";
 import Navbar from "../../components/AddRemoveInputField/Navbar";
 import "./../Home/Home.css";
+import card1 from "../../assets/images/Rectangle 73.png";
+import card2 from "../../assets/images/Rectangle 76.png";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#FFC727",
@@ -73,10 +75,35 @@ const SubscriptionPlan = () => {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse malesuada lacus ex, sit amet blandit leo
-                    lobortis eget.
+                  <Typography className="d-flex justify-content-start align-items-center">
+                    <div style={{ position: "relative" }}>
+                      <img src={card2} style={{ width: "150px" }} />
+                      <div className="bottom_text">
+                        <p>Lunch</p>
+                      </div>
+                    </div>
+                    <div>
+                      <h4
+                        className="ms-3"
+                        style={{
+                          fontWeight: "400",
+                          fontSize: "20px",
+                          LineHeight: "30px",
+                        }}
+                      >
+                        Mix Veg, Dal, Roti, Rice, Papad
+                      </h4>
+                      <p
+                        className="ms-3"
+                        style={{
+                          fontSize: "14px",
+                          LineHeight: "20px",
+                        }}
+                      >
+                        Mix Veg - 100g,Dal - 100g,Pickle - 10g <br />
+                        Roti - 2pcs,Rice - 150g,Papad - 2pcs
+                      </p>
+                    </div>
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -91,10 +118,30 @@ const SubscriptionPlan = () => {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse malesuada lacus ex, sit amet blandit leo
-                    lobortis eget.
+                  <Typography className="d-flex justify-content-start align-items-center">
+                    <img src={card1} style={{ width: "150px" }} />
+                    <div>
+                      <h4
+                        className="ms-3"
+                        style={{
+                          fontWeight: "400",
+                          fontSize: "20px",
+                          LineHeight: "30px",
+                        }}
+                      >
+                        Mix Veg, Dal, Roti, Rice, Papad
+                      </h4>
+                      <p
+                        className="ms-3"
+                        style={{
+                          fontSize: "14px",
+                          LineHeight: "20px",
+                        }}
+                      >
+                        Mix Veg - 100g,Dal - 100g,Pickle - 10g <br />
+                        Roti - 2pcs,Rice - 150g,Papad - 2pcs
+                      </p>
+                    </div>
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -109,10 +156,30 @@ const SubscriptionPlan = () => {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse malesuada lacus ex, sit amet blandit leo
-                    lobortis eget.
+                  <Typography className="d-flex justify-content-start align-items-center">
+                    <img src={card2} style={{ width: "150px" }} />
+                    <div>
+                      <h4
+                        className="ms-3"
+                        style={{
+                          fontWeight: "400",
+                          fontSize: "20px",
+                          LineHeight: "30px",
+                        }}
+                      >
+                        Mix Veg, Dal, Roti, Rice, Papad
+                      </h4>
+                      <p
+                        className="ms-3"
+                        style={{
+                          fontSize: "14px",
+                          LineHeight: "20px",
+                        }}
+                      >
+                        Mix Veg - 100g,Dal - 100g,Pickle - 10g <br />
+                        Roti - 2pcs,Rice - 150g,Papad - 2pcs
+                      </p>
+                    </div>
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -127,10 +194,30 @@ const SubscriptionPlan = () => {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse malesuada lacus ex, sit amet blandit leo
-                    lobortis eget.
+                  <Typography className="d-flex justify-content-start align-items-center">
+                    <img src={card1} style={{ width: "150px" }} />
+                    <div>
+                      <h4
+                        className="ms-3"
+                        style={{
+                          fontWeight: "400",
+                          fontSize: "20px",
+                          LineHeight: "30px",
+                        }}
+                      >
+                        Mix Veg, Dal, Roti, Rice, Papad
+                      </h4>
+                      <p
+                        className="ms-3"
+                        style={{
+                          fontSize: "14px",
+                          LineHeight: "20px",
+                        }}
+                      >
+                        Mix Veg - 100g,Dal - 100g,Pickle - 10g <br />
+                        Roti - 2pcs,Rice - 150g,Papad - 2pcs
+                      </p>
+                    </div>
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -145,10 +232,30 @@ const SubscriptionPlan = () => {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse malesuada lacus ex, sit amet blandit leo
-                    lobortis eget.
+                  <Typography className="d-flex justify-content-start align-items-center">
+                    <img src={card2} style={{ width: "150px" }} />
+                    <div>
+                      <h4
+                        className="ms-3"
+                        style={{
+                          fontWeight: "400",
+                          fontSize: "20px",
+                          LineHeight: "30px",
+                        }}
+                      >
+                        Mix Veg, Dal, Roti, Rice, Papad
+                      </h4>
+                      <p
+                        className="ms-3"
+                        style={{
+                          fontSize: "14px",
+                          LineHeight: "20px",
+                        }}
+                      >
+                        Mix Veg - 100g,Dal - 100g,Pickle - 10g <br />
+                        Roti - 2pcs,Rice - 150g,Papad - 2pcs
+                      </p>
+                    </div>
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -163,10 +270,30 @@ const SubscriptionPlan = () => {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse malesuada lacus ex, sit amet blandit leo
-                    lobortis eget.
+                  <Typography className="d-flex justify-content-start align-items-center">
+                    <img src={card1} style={{ width: "150px" }} />
+                    <div>
+                      <h4
+                        className="ms-3"
+                        style={{
+                          fontWeight: "400",
+                          fontSize: "20px",
+                          LineHeight: "30px",
+                        }}
+                      >
+                        Mix Veg, Dal, Roti, Rice, Papad
+                      </h4>
+                      <p
+                        className="ms-3"
+                        style={{
+                          fontSize: "14px",
+                          LineHeight: "20px",
+                        }}
+                      >
+                        Mix Veg - 100g,Dal - 100g,Pickle - 10g <br />
+                        Roti - 2pcs,Rice - 150g,Papad - 2pcs
+                      </p>
+                    </div>
                   </Typography>
                 </AccordionDetails>
               </Accordion>
@@ -181,10 +308,30 @@ const SubscriptionPlan = () => {
                   </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                  <Typography>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse malesuada lacus ex, sit amet blandit leo
-                    lobortis eget.
+                  <Typography className="d-flex justify-content-start align-items-center">
+                    <img src={card2} style={{ width: "150px" }} />
+                    <div>
+                      <h4
+                        className="ms-3"
+                        style={{
+                          fontWeight: "400",
+                          fontSize: "20px",
+                          LineHeight: "30px",
+                        }}
+                      >
+                        Mix Veg, Dal, Roti, Rice, Papad
+                      </h4>
+                      <p
+                        className="ms-3"
+                        style={{
+                          fontSize: "14px",
+                          LineHeight: "20px",
+                        }}
+                      >
+                        Mix Veg - 100g,Dal - 100g,Pickle - 10g <br />
+                        Roti - 2pcs,Rice - 150g,Papad - 2pcs
+                      </p>
+                    </div>
                   </Typography>
                 </AccordionDetails>
               </Accordion>
