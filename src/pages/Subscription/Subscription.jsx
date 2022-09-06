@@ -37,7 +37,7 @@ const Subscription = () => {
 
         <div className="food-banner">
           <div className="container">
-            <div className="row">
+            <div className="row g-2">
               <h2 className="text-center" style={{ fontSize: "32px" }}>
                 Meal Plans
               </h2>
@@ -46,19 +46,21 @@ const Subscription = () => {
                 <Link to="/subscription-plan">
                   <div className="offercard_1">
                     <img src={card1} alt="" className="card_img" />
-                    <div className="card_text">
-                      <h3>Veg Only</h3>
-                      <p>
-                        Weekly Starting from - ₹ 1000 <br /> Monthly Starting
-                        from - ₹ 4000
-                      </p>
-                    </div>
-                    <div className="AddBtn">
-                      <img
-                        style={{ width: "26.67px", height: "18.67px" }}
-                        src={addBtn}
-                        alt=""
-                      />
+                    <div className="card_text d-flex justify-content-between align-items-center">
+                      <div>
+                        <h3>Veg Only</h3>
+                        <p>
+                          Weekly Starting from - ₹ 1000 <br /> Monthly Starting
+                          from - ₹ 4000
+                        </p>
+                      </div>
+                      <div className="AddBtn">
+                        <img
+                          style={{ width: "26.67px", height: "18.67px" }}
+                          src={addBtn}
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -67,19 +69,21 @@ const Subscription = () => {
                 <Link to="/subscription-plan">
                   <div className="offercard_1">
                     <img src={card3} alt="" className="card_img" />
-                    <div className="card_text">
-                      <h3>Satvik (No Onion & Garlic)</h3>
-                      <p>
-                        Weekly Starting from - ₹ 1000 <br /> Monthly Starting
-                        from - ₹ 4000
-                      </p>
-                    </div>
-                    <div className="AddBtn">
-                      <img
-                        style={{ width: "26.67px", height: "18.67px" }}
-                        src={addBtn}
-                        alt=""
-                      />
+                    <div className="card_text d-flex justify-content-between align-items-center">
+                      <div>
+                        <h3>Satvik (No Onion & Garlic)</h3>
+                        <p>
+                          Weekly Starting from - ₹ 1000 <br /> Monthly Starting
+                          from - ₹ 4000
+                        </p>
+                      </div>
+                      <div className="AddBtn">
+                        <img
+                          style={{ width: "26.67px", height: "18.67px" }}
+                          src={addBtn}
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -88,19 +92,21 @@ const Subscription = () => {
                 <Link to="/subscription-plan">
                   <div className="offercard_1">
                     <img src={card2} alt="" className="card_img" />
-                    <div className="card_text">
-                      <h3>Veg & Non-Veg Combo</h3>
-                      <p>
-                        Weekly Starting from - ₹ 1200 <br /> Monthly Starting
-                        from - ₹ 4800
-                      </p>
-                    </div>
-                    <div className="AddBtn">
-                      <img
-                        style={{ width: "26.67px", height: "18.67px" }}
-                        src={addBtn}
-                        alt=""
-                      />
+                    <div className="card_text d-flex justify-content-between align-items-center">
+                      <div>
+                        <h3>Veg & Non-Veg Combo</h3>
+                        <p>
+                          Weekly Starting from - ₹ 1200 <br /> Monthly Starting
+                          from - ₹ 4800
+                        </p>
+                      </div>
+                      <div className="AddBtn">
+                        <img
+                          style={{ width: "26.67px", height: "18.67px" }}
+                          src={addBtn}
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -109,19 +115,21 @@ const Subscription = () => {
                 <Link to="/subscription-plan">
                   <div className="offercard_1">
                     <img src={card4} alt="" className="card_img" />
-                    <div className="card_text">
-                      <h3>Non-Veg Only</h3>
-                      <p>
-                        Weekly Starting from - ₹ 1400 <br /> Monthly Starting
-                        from - ₹ 5600
-                      </p>
-                    </div>
-                    <div className="AddBtn">
-                      <img
-                        style={{ width: "26.67px", height: "18.67px" }}
-                        src={addBtn}
-                        alt=""
-                      />
+                    <div className="card_text d-flex justify-content-between align-items-center">
+                      <div>
+                        <h3>Non-Veg Only</h3>
+                        <p>
+                          Weekly Starting from - ₹ 1400 <br /> Monthly Starting
+                          from - ₹ 5600
+                        </p>
+                      </div>
+                      <div className="AddBtn">
+                        <img
+                          style={{ width: "26.67px", height: "18.67px" }}
+                          src={addBtn}
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -130,19 +138,21 @@ const Subscription = () => {
                 <Link to="/subscription-plan">
                   <div className="offercard_1">
                     <img src={card6} alt="" className="card_img" />
-                    <div className="card_text">
-                      <h3>Odisha Special</h3>
-                      <p>
-                        Weekly Starting from - ₹ 1100 <br /> Monthly Starting
-                        from - ₹ 4400
-                      </p>
-                    </div>
-                    <div className="AddBtn">
-                      <img
-                        style={{ width: "26.67px", height: "18.67px" }}
-                        src={addBtn}
-                        alt=""
-                      />
+                    <div className="card_text d-flex justify-content-between align-items-center">
+                      <div>
+                        <h3>Odisha Special</h3>
+                        <p>
+                          Weekly Starting from - ₹ 1100 <br /> Monthly Starting
+                          from - ₹ 4400
+                        </p>
+                      </div>
+                      <div className="AddBtn">
+                        <img
+                          style={{ width: "26.67px", height: "18.67px" }}
+                          src={addBtn}
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </Link>
@@ -151,19 +161,21 @@ const Subscription = () => {
                 <Link to="/subscription-plan">
                   <div className="offercard_1">
                     <img src={card5} alt="" className="card_img" />
-                    <div className="card_text">
-                      <h3>North Indian Special</h3>
-                      <p>
-                        Weekly Starting from - ₹ 1300 <br /> Monthly Starting
-                        from - ₹ 5200
-                      </p>
-                    </div>
-                    <div className="AddBtn">
-                      <img
-                        style={{ width: "26.67px", height: "18.67px" }}
-                        src={addBtn}
-                        alt=""
-                      />
+                    <div className="card_text d-flex justify-content-between align-items-center">
+                      <div>
+                        <h3>North Indian Special</h3>
+                        <p>
+                          Weekly Starting from - ₹ 1300 <br /> Monthly Starting
+                          from - ₹ 5200
+                        </p>
+                      </div>
+                      <div className="AddBtn">
+                        <img
+                          style={{ width: "26.67px", height: "18.67px" }}
+                          src={addBtn}
+                          alt=""
+                        />
+                      </div>
                     </div>
                   </div>
                 </Link>

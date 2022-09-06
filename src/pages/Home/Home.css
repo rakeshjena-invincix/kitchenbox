@@ -342,15 +342,15 @@ a.downloadmenu {
 }
 .card_text h3 {
   font-weight: 900;
-  font-size: 22px;
+  font-size: 20px;
 }
 .card_text p {
   font-size: 11px;
 }
 .AddBtn {
-  position: relative;
-  top: -155px;
-  left: 5px;
+  /* position: relative; */
+  /* top: -155px;
+  left: 5px; */
 }
 .offercard_1 {
   margin-bottom: -82px;
