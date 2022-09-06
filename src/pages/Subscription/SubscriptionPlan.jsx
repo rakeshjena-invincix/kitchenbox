@@ -1,3 +1,4 @@
+import { CalendarMonth } from "@mui/icons-material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Button, Divider } from "@mui/material";
 import Accordion from "@mui/material/Accordion";
@@ -7,7 +8,8 @@ import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
 import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
-import React from "react";
+import React, { useState } from "react";
+import Modal from "react-bootstrap/Modal";
 import subscriptionBanner from "../../assets/images/Meal Subscription 1.png";
 import Navbar from "../../components/AddRemoveInputField/Navbar";
 import "./../Home/Home.css";
@@ -21,6 +23,10 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 const SubscriptionPlan = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <Navbar />
@@ -62,7 +68,9 @@ const SubscriptionPlan = () => {
                   aria-controls="panel1a-content"
                   id="panel1a-header"
                 >
-                  <Typography>Monday</Typography>
+                  <Typography>
+                    <CalendarMonth /> Monday
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
@@ -78,7 +86,9 @@ const SubscriptionPlan = () => {
                   aria-controls="panel2a-content"
                   id="panel2a-header"
                 >
-                  <Typography>Tuesday</Typography>
+                  <Typography>
+                    <CalendarMonth /> Tuesday
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
@@ -94,7 +104,9 @@ const SubscriptionPlan = () => {
                   aria-controls="panel2a-content"
                   id="panel2a-header"
                 >
-                  <Typography>Wednesday</Typography>
+                  <Typography>
+                    <CalendarMonth /> Wednesday
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
@@ -110,7 +122,9 @@ const SubscriptionPlan = () => {
                   aria-controls="panel2a-content"
                   id="panel2a-header"
                 >
-                  <Typography>Thursday</Typography>
+                  <Typography>
+                    <CalendarMonth /> Thursday
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
@@ -126,7 +140,9 @@ const SubscriptionPlan = () => {
                   aria-controls="panel2a-content"
                   id="panel2a-header"
                 >
-                  <Typography>Friday</Typography>
+                  <Typography>
+                    <CalendarMonth /> Friday
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
@@ -142,7 +158,9 @@ const SubscriptionPlan = () => {
                   aria-controls="panel2a-content"
                   id="panel2a-header"
                 >
-                  <Typography>Saturday</Typography>
+                  <Typography>
+                    <CalendarMonth /> Saturday
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
@@ -158,7 +176,9 @@ const SubscriptionPlan = () => {
                   aria-controls="panel2a-content"
                   id="panel2a-header"
                 >
-                  <Typography>Sunday</Typography>
+                  <Typography>
+                    <CalendarMonth /> Sunday
+                  </Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                   <Typography>
@@ -218,12 +238,11 @@ const SubscriptionPlan = () => {
                 variant="contained"
                 size="large"
                 style={{
-                  // marginTop: "5px",
                   color: "black",
                   width: "200px",
                   backgroundColor: "#FFC727",
-                  // borderRadius: "50px",
                 }}
+                onClick={handleShow}
               >
                 NEXT
               </Button>
@@ -231,6 +250,12 @@ const SubscriptionPlan = () => {
           </div>
         </div>
       </section>
+      <Modal show={show} onHide={handleClose} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Summary</Modal.Title>
+        </Modal.Header>
+        <Modal.Body></Modal.Body>
+      </Modal>
     </>
   );
 };

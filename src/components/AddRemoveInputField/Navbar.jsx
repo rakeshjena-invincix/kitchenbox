@@ -1,11 +1,10 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+import { Percent } from "@mui/icons-material";
 import React from "react";
-import { IoFastFoodOutline } from "react-icons/io5";
-import { MdOutlineAccountCircle } from "react-icons/md";
-import logo from "../../assets/images/logo.png";
-
-import { AiOutlinePercentage, AiOutlineShoppingCart } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.png";
+import account from "./../../assets/images/Vector (1).png";
+import cart from "./../../assets/images/Vector (2).png";
 import "./../../pages/Home/Home.css";
 const Navbar = () => {
   return (
@@ -15,7 +14,7 @@ const Navbar = () => {
           <div className="container">
             <Link className="navbar-brand" to="/">
               <img
-                style={{ width: "40px", position: "", top: "" }}
+                style={{ width: "85px", position: "absolute", top: "9px" }}
                 src={logo}
                 alt=""
               />
@@ -37,20 +36,20 @@ const Navbar = () => {
               id="navbarNavAltMarkup"
             >
               <div className="navbar-nav">
-                <a className="nav-link " aria-current="page" href="#">
-                  <AiOutlinePercentage /> Offers
-                </a>
-                <Link to="/subscription" className="nav-link" href="menu.html">
-                  <IoFastFoodOutline /> Kitchen Box
+                <Link className="nav-link " aria-current="page" to="/">
+                  <Percent /> Offers
+                </Link>
+                <Link to="/" className="nav-link">
+                  <span className="fw-bold">KB</span> Kitchen Box
                 </Link>
               </div>
               <div className="navbar-nav">
                 <Link to="/" className="nav-link">
-                  <MdOutlineAccountCircle /> Account
+                  <img src={account} alt="" /> Account
                 </Link>
 
                 <Link to="/billing" className="nav-link">
-                  <AiOutlineShoppingCart /> Cart
+                  <img src={cart} alt="" /> Cart
                 </Link>
               </div>
             </div>
