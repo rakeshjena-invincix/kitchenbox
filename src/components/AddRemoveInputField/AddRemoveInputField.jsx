@@ -1,4 +1,3 @@
-// import { TextField } from "@mui/material";
 import { Button } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
@@ -49,7 +48,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
     list[index]["item_metric"] = selectedOptions.item_metric;
     list[index]["total"] = selectedOptions.total;
     list[index][name] = value;
-    console.log(list);
+
     setInputFields(list);
     handlePrice(list, selectedOptions);
   };
@@ -88,31 +87,61 @@ const AddRemoveInputField = ({ handlePrice }) => {
       container_type: "300 gram plastic round",
       cooking_style: "Odisha Special",
     },
-    { label: "French Toast", item_price: 69, item_category: "veg" },
+
     {
+      item_id: 104,
+      label: "French Toast",
+      item_price: 69,
+      item_category: "veg",
+      item_quantity: 250,
+      item_metric: "gram",
+    },
+    {
+      item_id: 105,
       label: "Tomato Onion Omelette With Butter Toast",
       item_price: 69,
+      item_quantity: 200,
+      item_metric: "gram",
       item_category: "non-veg",
     },
     {
+      item_id: 106,
       label: "Spinach Omelette With Butter Toast",
       item_price: 79,
+      item_quantity: 300,
       item_category: "non-veg",
     },
     {
+      item_id: 107,
       label: "Boiled Egg With Butter Toast",
       item_price: 79,
+      item_quantity: 300,
+      item_metric: "gram",
       item_category: "non-veg",
     },
-    { label: "Chilli Cheese Toast", item_price: 79, item_category: "veg" },
+
     {
+      item_id: 108,
+      label: "Chilli Cheese Toast",
+      item_price: 79,
+      item_category: "veg",
+      item_quantity: 500,
+      item_metric: "gram",
+    },
+    {
+      item_id: 109,
       label: "Cheese Omelette With Butter Toast",
       item_price: 99,
+      item_quantity: 500,
+      item_metric: "gram",
       item_category: "non-veg",
     },
     {
+      item_id: 110,
       label: "Veg Hot And Sour Soup",
       item_price: 79,
+      item_quantity: 500,
+      item_metric: "gram",
       item_category: "veg",
     },
   ];
@@ -130,6 +159,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                     <div className="form-group col-sm-3 p-1 mx-3">
                       <Autocomplete
                         disablePortal
+                        disableClearable
                         id="dish"
                         options={fakeDatas}
                         onChange={(event, value) => setSelectedOptions(value)}
@@ -218,6 +248,24 @@ const AddRemoveInputField = ({ handlePrice }) => {
               >
                 Add Item
               </Button>
+              {/* {inputFields.length !== 1 ? (
+                <>
+                  <Button
+                    variant="contained"
+                    size="small"
+                    style={{
+                      marginTop: "5px",
+                      backgroundColor: "#EB1D36",
+                      borderRadius: "50px",
+                    }}
+                    onClick={removeInputFields}
+                  >
+                    Remove Item
+                  </Button>
+                </>
+              ) : (
+                ""
+              )} */}
             </div>
           </div>
         </div>

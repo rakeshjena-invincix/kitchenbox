@@ -59,6 +59,23 @@ const MyVerticallyCenteredModal = (props) => {
               }}
               className="pb-3"
             />
+            <Button
+              variant="contained"
+              style={{
+                marginTop: "5px",
+                backgroundColor: "#FFC727",
+                borderRadius: "50px",
+              }}
+              onClick={openOtpFunc}
+            >
+              Send OTP
+            </Button>
+            <p
+              className="pt-3"
+              style={{ textAlign: "center", fontSize: "8px", marginTop: "4px" }}
+            >
+              By clicking on login, I accept all the terms and conditions
+            </p>
           </>
         ) : (
           <>
@@ -93,26 +110,26 @@ const MyVerticallyCenteredModal = (props) => {
                 <span>Time left : 53 sec</span>
               </div>
             </div>
+            <a href="/">
+              <Button
+                variant="contained"
+                style={{
+                  marginTop: "5px",
+                  backgroundColor: "#FFC727",
+                  borderRadius: "50px",
+                }}
+              >
+                Login
+              </Button>
+            </a>
+            <p
+              className="pt-3"
+              style={{ textAlign: "center", fontSize: "8px", marginTop: "4px" }}
+            >
+              By clicking on login, I accept all the terms and conditions
+            </p>
           </>
         )}
-
-        <Button
-          variant="contained"
-          style={{
-            marginTop: "5px",
-            backgroundColor: "#FFC727",
-            borderRadius: "50px",
-          }}
-          onClick={openOtpFunc}
-        >
-          {show ? "Send OTP" : "Login"}
-        </Button>
-        <p
-          className="pt-3"
-          style={{ textAlign: "center", fontSize: "8px", marginTop: "4px" }}
-        >
-          By clicking on login, I accept all the terms and conditions
-        </p>
       </Modal.Body>
     </Modal>
   );
