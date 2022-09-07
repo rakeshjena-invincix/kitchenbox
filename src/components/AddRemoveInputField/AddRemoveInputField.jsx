@@ -1,177 +1,125 @@
 import { Button } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
-import { useState } from "react";
-import { AiFillDelete } from "react-icons/ai";
+import { useEffect, useState } from "react";
 
 const AddRemoveInputField = ({ handlePrice }) => {
+  const [quantity, setQuantity] = useState(null);
+  console.log(quantity);
+  const [currentItemId, setCurrentItemId] = useState(null);
+
   const [inputFields, setInputFields] = useState([
     {
-      dish: "",
-      price: "",
-      quantity: "",
+      item_id: null,
       item_category: "",
+      item_name: "",
+      item_price: 0,
       item_quantity: 0,
       item_metric: "",
-      total: "",
+      item_description: "",
+      container_type: "",
+      cooking_style: "",
+      total: 0,
     },
   ]);
+
   const [selectedOptions, setSelectedOptions] = useState([]);
+
+  useEffect(() => {
+    console.log("called ", quantity);
+
+    console.log("selectedOptions ", selectedOptions);
+
+    console.log("selectedOptions index", currentItemId);
+
+    if (quantity) {
+      const list = [...inputFields];
+
+      // list[index]["dish"] = selectedOptions.label;
+      list[currentItemId]["item_price"] = selectedOptions.item_price;
+      list[currentItemId]["item_quantity"] = quantity;
+
+      list[currentItemId]["total"] = selectedOptions.item_price * quantity;
+      console.log("list ", list);
+
+      setInputFields((oldFields) => (oldFields = list));
+      handlePrice(list);
+    }
+  }, [quantity]);
+
+  const handleQuantityChange = (item_id, quantity, value) => {
+    setSelectedOptions(value);
+    setQuantity(quantity);
+    setCurrentItemId(item_id);
+  };
+
   const addInputField = () => {
     setInputFields([
       ...inputFields,
       {
-        dish: "",
-        price: "",
-        quantity: "",
         item_category: "",
+        item_name: "",
+        item_price: 0,
         item_quantity: 0,
         item_metric: "",
-        total: "",
+        item_description: "",
+        container_type: "",
+        cooking_style: "",
+        total: 0,
       },
     ]);
   };
+
   const removeInputFields = (index) => {
     const rows = [...inputFields];
-    rows.splice(index, 1);
+    // rows.splice(index, 1);
+    rows.pop();
     setInputFields(rows);
+    handlePrice(rows);
   };
+
   const handleChange = (index, event) => {
     const { name, value } = event.target;
 
+    console.log("selectedOptions ", selectedOptions);
     const list = [...inputFields];
 
-    list[index]["dish"] = selectedOptions.label;
-    list[index]["price"] = selectedOptions.item_price;
-    list[index][" item_category"] = selectedOptions.item_category;
-    list[index]["item_quantity"] = selectedOptions.item_quantity;
-    list[index]["item_metric"] = selectedOptions.item_metric;
-    list[index]["total"] = selectedOptions.total;
+    // list[index]["dish"] = selectedOptions.label;
+    list[index]["item_price"] = selectedOptions.item_price;
+    // list[index]["item_category"] = selectedOptions.item_category;
+    // list[index]["item_quantity"] = selectedOptions.item_quantity;
+    // list[index]["item_metric"] = selectedOptions.item_metric;
     list[index][name] = value;
-
+    console.log("list ", list);
     setInputFields(list);
-    handlePrice(list, selectedOptions);
+    handlePrice(list);
   };
 
-  const fakeDatas = [
-    {
-      item_id: 101,
-      item_category: "veg",
-      label: "Paneer Butter Masala",
-      item_price: 159,
-      item_quantity: 300,
-      item_metric: "gram",
-      item_description: "soft paneer with mouth melting spices in butter",
-      container_type: "300 gram plastic round",
-      cooking_style: "Punjabi Special",
-    },
-    {
-      item_id: 102,
-      item_category: "non-veg",
-      label: "Chicken Butter Masala",
-      item_price: 189,
-      item_quantity: 500,
-      item_metric: "gram",
-      item_description: "boneless chicken with mouth melting spices in butter",
-      container_type: "300 gram plastic round",
-      cooking_style: "Punjabi Special",
-    },
-    {
-      item_id: 103,
-      item_category: "non-veg",
-      label: "Chicken Alu Curry",
-      item_price: 179,
-      item_quantity: 500,
-      item_metric: "ml",
-      item_description: "4 pc chicken with 2 pcs alu curry",
-      container_type: "300 gram plastic round",
-      cooking_style: "Odisha Special",
-    },
-
-    {
-      item_id: 104,
-      label: "French Toast",
-      item_price: 69,
-      item_category: "veg",
-      item_quantity: 250,
-      item_metric: "gram",
-    },
-    {
-      item_id: 105,
-      label: "Tomato Onion Omelette With Butter Toast",
-      item_price: 69,
-      item_quantity: 200,
-      item_metric: "gram",
-      item_category: "non-veg",
-    },
-    {
-      item_id: 106,
-      label: "Spinach Omelette With Butter Toast",
-      item_price: 79,
-      item_quantity: 300,
-      item_category: "non-veg",
-    },
-    {
-      item_id: 107,
-      label: "Boiled Egg With Butter Toast",
-      item_price: 79,
-      item_quantity: 300,
-      item_metric: "gram",
-      item_category: "non-veg",
-    },
-
-    {
-      item_id: 108,
-      label: "Chilli Cheese Toast",
-      item_price: 79,
-      item_category: "veg",
-      item_quantity: 500,
-      item_metric: "gram",
-    },
-    {
-      item_id: 109,
-      label: "Cheese Omelette With Butter Toast",
-      item_price: 99,
-      item_quantity: 500,
-      item_metric: "gram",
-      item_category: "non-veg",
-    },
-    {
-      item_id: 110,
-      label: "Veg Hot And Sour Soup",
-      item_price: 79,
-      item_quantity: 500,
-      item_metric: "gram",
-      item_category: "veg",
-    },
-  ];
+  // const handler = useCallback(debounce(index, event) => handleChange(index, event), 1500, []);
 
   return (
     <div className="container">
       <div className="row">
         <div className="col-sm-12">
           {inputFields.map((data, index) => {
-            const { dish, price, quantity, total } = data;
+            const { item_name, item_price, quantity, total, item_id } = data;
             return (
               <div className="row my-3" key={index}>
                 <div className="col-11 d-flex ">
                   <div className="row">
                     <div className="form-group col-sm-3 p-1 mx-3">
                       <Autocomplete
-                        disablePortal
                         disableClearable
                         id="dish"
                         options={fakeDatas}
+                        onSelect={(event) => handleChange(index, event)}
                         onChange={(event, value) => setSelectedOptions(value)}
-                        isOptionEqualToValue={(option, value) =>
-                          option.label === value.label
-                        }
+                        getOptionLabel={(option) => option.item_name}
                         renderInput={(params) => (
                           <TextField
                             {...params}
-                            id="dish"
                             label="Dish"
-                            value={dish}
+                            name="item_name"
                             style={{
                               width: "100%",
                             }}
@@ -187,8 +135,8 @@ const AddRemoveInputField = ({ handlePrice }) => {
                         variant="outlined"
                         type="text"
                         onChange={(event) => handleChange(index, event)}
-                        value={price}
-                        name="price"
+                        value={item_price}
+                        name="item_price"
                       />
                     </div>
                     <div className="form-group col-sm-2 p-1  mx-3">
@@ -196,8 +144,10 @@ const AddRemoveInputField = ({ handlePrice }) => {
                         id="quantity"
                         label="Quantity"
                         variant="outlined"
-                        type="number"
-                        onChange={(event) => handleChange(index, event)}
+                        type="text"
+                        onChange={(event) =>
+                          handleQuantityChange(index, event.target.value, data)
+                        }
                         value={quantity}
                         name="quantity"
                       />
@@ -210,13 +160,14 @@ const AddRemoveInputField = ({ handlePrice }) => {
                         label="Total"
                         variant="outlined"
                         type="number"
-                        value={price * quantity}
+                        onChange={(event) => handleChange(index, event)}
+                        value={total}
                         name="total"
                       />
                     </div>
                   </div>
                 </div>
-                <div className="col-1">
+                {/* <div className="col-1">
                   {inputFields.length !== 1 ? (
                     <AiFillDelete
                       onClick={removeInputFields}
@@ -229,7 +180,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                   ) : (
                     ""
                   )}
-                </div>
+                </div> */}
               </div>
             );
           })}
@@ -248,7 +199,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
               >
                 Add Item
               </Button>
-              {/* {inputFields.length !== 1 ? (
+              {inputFields.length !== 1 ? (
                 <>
                   <Button
                     variant="contained"
@@ -265,7 +216,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                 </>
               ) : (
                 ""
-              )} */}
+              )}
             </div>
           </div>
         </div>
@@ -274,3 +225,98 @@ const AddRemoveInputField = ({ handlePrice }) => {
   );
 };
 export default AddRemoveInputField;
+
+const fakeDatas = [
+  {
+    item_id: 101,
+    item_category: "veg",
+    item_name: "Paneer Butter Masala",
+    item_price: 159,
+    item_quantity: 300,
+    item_metric: "gram",
+    item_description: "soft paneer with mouth melting spices in butter",
+    container_type: "300 gram plastic round",
+    cooking_style: "Punjabi Special",
+  },
+  {
+    item_id: 102,
+    item_category: "non-veg",
+    item_name: "Chicken Butter Masala",
+    item_price: 189,
+    item_quantity: 500,
+    item_metric: "gram",
+    item_description: "boneless chicken with mouth melting spices in butter",
+    container_type: "300 gram plastic round",
+    cooking_style: "Punjabi Special",
+  },
+  {
+    item_id: 103,
+    item_category: "non-veg",
+    item_name: "Chicken Alu Curry",
+    item_price: 179,
+    item_quantity: 500,
+    item_metric: "ml",
+    item_description: "4 pc chicken with 2 pcs alu curry",
+    container_type: "300 gram plastic round",
+    cooking_style: "Odisha Special",
+  },
+
+  {
+    item_id: 104,
+    item_name: "French Toast",
+    item_price: 69,
+    item_category: "veg",
+    item_quantity: 250,
+    item_metric: "gram",
+  },
+  {
+    item_id: 105,
+    item_name: "Tomato Onion Omelette With Butter Toast",
+    item_price: 69,
+    item_quantity: 200,
+    item_metric: "gram",
+    item_category: "non-veg",
+  },
+  {
+    item_id: 106,
+    item_name: "Spinach Omelette With Butter Toast",
+    item_price: 79,
+    item_quantity: 300,
+    item_metric: "gram",
+
+    item_category: "non-veg",
+  },
+  {
+    item_id: 107,
+    item_name: "Boiled Egg With Butter Toast",
+    item_price: 79,
+    item_quantity: 300,
+    item_metric: "gram",
+    item_category: "non-veg",
+  },
+
+  {
+    item_id: 108,
+    item_name: "Chilli Cheese Toast",
+    item_price: 79,
+    item_category: "veg",
+    item_quantity: 500,
+    item_metric: "gram",
+  },
+  {
+    item_id: 109,
+    item_name: "Cheese Omelette With Butter Toast",
+    item_price: 99,
+    item_quantity: 500,
+    item_metric: "gram",
+    item_category: "non-veg",
+  },
+  {
+    item_id: 110,
+    item_name: "Veg Hot And Sour Soup",
+    item_price: 79,
+    item_quantity: 500,
+    item_metric: "gram",
+    item_category: "veg",
+  },
+];

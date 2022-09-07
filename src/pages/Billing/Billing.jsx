@@ -14,7 +14,9 @@ const Billing = () => {
   };
   useEffect(() => {
     let total = 0;
-    const totalValue = items.map((val) => (total += val.price * val.quantity));
+    const totalValue = items.map(
+      (val) => (total += val.item_price * val.item_quantity)
+    );
     setTotalPrice(total);
   }, [items]);
 
@@ -145,11 +147,12 @@ const Billing = () => {
                               alt=""
                               width="15"
                             /> */}
-                            {value.dish} x {value.quantity}(
-                            {value.item_quantity} {value.item_metric})
+                            {value.item_name} x {value.item_quantity}
+                            {/* (
+                            {value.item_quantity} {value.item_metric}) */}
                           </span>
                           <span className=" text-end">
-                            &#8377;{value.price}
+                            &#8377;{value.item_price}
                           </span>
                         </div>
                       </>
