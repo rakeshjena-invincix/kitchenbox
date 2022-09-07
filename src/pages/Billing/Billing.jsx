@@ -1,8 +1,9 @@
+import PaymentIcon from "@mui/icons-material/Payment";
+import ReceiptIcon from "@mui/icons-material/Receipt";
 import { Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
-
 import AddRemoveInputField from "../../components/AddRemoveInputField/AddRemoveInputField";
 import "./billing.css";
 const Billing = () => {
@@ -15,7 +16,7 @@ const Billing = () => {
   useEffect(() => {
     let total = 0;
     const totalValue = items.map(
-      (val) => (total += val.item_price * val.item_quantity)
+      (val) => (total += val.item_price * val.quantity)
     );
     setTotalPrice(total);
   }, [items]);
@@ -147,9 +148,8 @@ const Billing = () => {
                               alt=""
                               width="15"
                             /> */}
-                            {value.item_name} x {value.item_quantity}
-                            {/* (
-                            {value.item_quantity} {value.item_metric}) */}
+                            {value.item_name} x {value.quantity}(
+                            {value.item_quantity} {value.item_metric})
                           </span>
                           <span className=" text-end">
                             &#8377;{value.item_price}
@@ -237,8 +237,8 @@ const Billing = () => {
                             }}
                           >
                             Payment Option
-                          </Button>
-
+                            <PaymentIcon />
+                          </Button>{" "}
                           <Button
                             variant="contained"
                             size="small"
@@ -249,6 +249,7 @@ const Billing = () => {
                             }}
                           >
                             Send Invoice
+                            <ReceiptIcon />
                           </Button>
                         </div>
                       </>

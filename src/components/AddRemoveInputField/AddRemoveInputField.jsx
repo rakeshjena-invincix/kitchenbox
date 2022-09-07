@@ -1,8 +1,9 @@
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
 import { Button } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import { useEffect, useState } from "react";
-
 const AddRemoveInputField = ({ handlePrice }) => {
   const [quantity, setQuantity] = useState(null);
   console.log(quantity);
@@ -14,7 +15,8 @@ const AddRemoveInputField = ({ handlePrice }) => {
       item_category: "",
       item_name: "",
       item_price: 0,
-      item_quantity: 0,
+      quantity: "",
+      item_quantity: "",
       item_metric: "",
       item_description: "",
       container_type: "",
@@ -37,7 +39,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
 
       // list[index]["dish"] = selectedOptions.label;
       list[currentItemId]["item_price"] = selectedOptions.item_price;
-      list[currentItemId]["item_quantity"] = quantity;
+      list[currentItemId]["quantity"] = quantity;
 
       list[currentItemId]["total"] = selectedOptions.item_price * quantity;
       console.log("list ", list);
@@ -60,7 +62,8 @@ const AddRemoveInputField = ({ handlePrice }) => {
         item_category: "",
         item_name: "",
         item_price: 0,
-        item_quantity: 0,
+        quantity: "",
+        item_quantity: "",
         item_metric: "",
         item_description: "",
         container_type: "",
@@ -87,8 +90,8 @@ const AddRemoveInputField = ({ handlePrice }) => {
     // list[index]["dish"] = selectedOptions.label;
     list[index]["item_price"] = selectedOptions.item_price;
     // list[index]["item_category"] = selectedOptions.item_category;
-    // list[index]["item_quantity"] = selectedOptions.item_quantity;
-    // list[index]["item_metric"] = selectedOptions.item_metric;
+    list[index]["item_quantity"] = selectedOptions.item_quantity;
+    list[index]["item_metric"] = selectedOptions.item_metric;
     list[index][name] = value;
     console.log("list ", list);
     setInputFields(list);
@@ -144,7 +147,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                         id="quantity"
                         label="Quantity"
                         variant="outlined"
-                        type="text"
+                        type="number"
                         onChange={(event) =>
                           handleQuantityChange(index, event.target.value, data)
                         }
@@ -197,7 +200,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                 }}
                 onClick={addInputField}
               >
-                Add Item
+                <AddIcon />
               </Button>
               {inputFields.length !== 1 ? (
                 <>
@@ -211,7 +214,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                     }}
                     onClick={removeInputFields}
                   >
-                    Remove Item
+                    <RemoveIcon />
                   </Button>
                 </>
               ) : (
