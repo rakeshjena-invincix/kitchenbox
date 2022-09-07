@@ -142,18 +142,24 @@ const Billing = () => {
                           key={i}
                           className="d-flex justify-content-between fw-bold"
                         >
-                          <span className="mb-3 text-start ">
-                            {/* <img
+                          {items.length > 0 ? (
+                            <>
+                              <span className="mb-3 text-start ">
+                                {/* <img
                               src={`../../assets/images/${value.item_category}.png`}
                               alt=""
                               width="15"
                             /> */}
-                            {value.item_name} x {value.quantity}(
-                            {value.item_quantity} {value.item_metric})
-                          </span>
-                          <span className=" text-end">
-                            &#8377;{value.item_price}
-                          </span>
+                                {value.item_name} x {value.quantity}(
+                                {value.item_quantity} {value.item_metric})
+                              </span>
+                              <span className=" text-end">
+                                &#8377;{value.item_price}
+                              </span>
+                            </>
+                          ) : (
+                            <></>
+                          )}
                         </div>
                       </>
                     ))}

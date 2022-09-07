@@ -7,7 +7,7 @@ import TextField from "@mui/material/TextField";
 import { useEffect, useState } from "react";
 const AddRemoveInputField = ({ handlePrice }) => {
   const [quantity, setQuantity] = useState(null);
-  console.log(quantity);
+
   const [currentItemId, setCurrentItemId] = useState(null);
 
   const [inputFields, setInputFields] = useState([
@@ -193,8 +193,8 @@ const AddRemoveInputField = ({ handlePrice }) => {
                   {inputFields.length !== 1 ? (
                     <Delete
                       onClick={() => removeInputFields(index)}
-                      color="#EB1D36"
-                      style={{
+                      sx={{
+                        color: "#EB1D36",
                         cursor: "pointer",
                         fontSize: "18px",
                       }}
