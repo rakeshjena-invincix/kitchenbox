@@ -1,3 +1,4 @@
+import { Delete } from "@mui/icons-material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import { Button } from "@mui/material";
@@ -11,7 +12,6 @@ const AddRemoveInputField = ({ handlePrice }) => {
 
   const [inputFields, setInputFields] = useState([
     {
-      item_id: null,
       item_category: "",
       item_name: "",
       item_price: 0,
@@ -74,11 +74,26 @@ const AddRemoveInputField = ({ handlePrice }) => {
   };
 
   const removeInputFields = (index) => {
+    console.log(index);
     const rows = [...inputFields];
-    // rows.splice(index, 1);
-    rows.pop();
-    setInputFields(rows);
+    rows.splice(index, 1);
+    // rows.pop();
+    // const restData =
+    console.log("ROWS->>>>>>>>>>", rows, inputFields);
+
     handlePrice(rows);
+    setInputFields(rows);
+
+    // setInputFields(
+    //   rows.filter((elem, i) => {
+    //     return i !== index;
+    //   })
+    // );
+    // handlePrice(
+    //   rows.filter((elem, i) => {
+    //     return i !== index;
+    //   })
+    // );
   };
 
   const handleChange = (index, event) => {
@@ -106,6 +121,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
         <div className="col-sm-12">
           {inputFields.map((data, index) => {
             const { item_name, item_price, quantity, total, item_id } = data;
+            console.log(item_name);
             return (
               <div className="row my-3" key={index}>
                 <div className="col-11 d-flex ">
@@ -115,6 +131,8 @@ const AddRemoveInputField = ({ handlePrice }) => {
                         disableClearable
                         id="dish"
                         options={fakeDatas}
+                        value={data}
+                        filterSelectedOptions
                         onSelect={(event) => handleChange(index, event)}
                         onChange={(event, value) => setSelectedOptions(value)}
                         getOptionLabel={(option) => option.item_name}
@@ -130,6 +148,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                         )}
                       />
                     </div>
+
                     <div className="form-group col-sm-3 p-1  mx-3">
                       <TextField
                         disabled
@@ -170,10 +189,10 @@ const AddRemoveInputField = ({ handlePrice }) => {
                     </div>
                   </div>
                 </div>
-                {/* <div className="col-1">
+                <div className="col-1">
                   {inputFields.length !== 1 ? (
-                    <AiFillDelete
-                      onClick={removeInputFields}
+                    <Delete
+                      onClick={() => removeInputFields(index)}
                       color="#EB1D36"
                       style={{
                         cursor: "pointer",
@@ -183,7 +202,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                   ) : (
                     ""
                   )}
-                </div> */}
+                </div>
               </div>
             );
           })}
