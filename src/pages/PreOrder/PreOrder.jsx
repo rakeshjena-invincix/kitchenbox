@@ -1,18 +1,9 @@
+import StarIcon from "@mui/icons-material/Star";
 import Button from "@mui/material/Button";
 import React from "react";
 import { Link } from "react-router-dom";
-import addBtn from "../../assets/images/Vector.png";
-import card1 from "../../assets/images/Rectangle 121.png";
 import preorderBanner from "../../assets/images/Meal Subscription 3.png";
-// import card1 from "../../assets/images/Rectangle 35.png";
-import card2 from "../../assets/images/Rectangle 36.png";
-import card3 from "../../assets/images/Rectangle 37.png";
-import card4 from "../../assets/images/Rectangle 38.png";
-import card5 from "../../assets/images/Rectangle 39.png";
-import card6 from "../../assets/images/Rectangle 40.png";
-
-import StarIcon from "@mui/icons-material/Star";
-// import addBtn from "../../assets/images/Vector.png";
+import card1 from "../../assets/images/Rectangle 121.png";
 import Banner from "../../components/Banner";
 import Navbar from "../../components/Navbar";
 

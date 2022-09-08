@@ -1,5 +1,4 @@
 import { Delete } from "@mui/icons-material";
-import AddIcon from "@mui/icons-material/Add";
 import { Button } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
@@ -124,7 +123,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
               <div className="row my-3" key={index}>
                 <div className="col-11 d-flex ">
                   <div className="row">
-                    <div className="form-group col-sm-3 p-1 mx-3">
+                    <div className="form-group col-sm-4 p-1 mx-3">
                       <Autocomplete
                         disableClearable
                         id="dish"
@@ -137,7 +136,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                         renderInput={(params) => (
                           <TextField
                             {...params}
-                            label="Dish"
+                            label="Enter/Select Dish"
                             name="item_name"
                             style={{
                               width: "100%",
@@ -147,7 +146,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                       />
                     </div>
 
-                    <div className="form-group col-sm-3 p-1  mx-3">
+                    <div className="form-group col-sm-2 p-1  mx-3">
                       <TextField
                         disabled
                         id="price"
@@ -187,37 +186,59 @@ const AddRemoveInputField = ({ handlePrice }) => {
                     </div>
                   </div>
                 </div>
-                <div className="col-1">
-                  {inputFields.length !== 1 ? (
+                {/* {inputFields.length !== 1 ? ( */}
+                <>
+                  <div
+                    className="col-2"
+                    style={{
+                      // position: "absolute",
+                      background: "#FFC727",
+                      borderRadius: "12.695px",
+                      width: "40px",
+                      height: "40px",
+                      left: "1440px",
+                      top: "1024px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => removeInputFields(index)}
+                  >
                     <Delete
-                      onClick={() => removeInputFields(index)}
-                      sx={{
-                        color: "#EB1D36",
-                        cursor: "pointer",
-                        fontSize: "18px",
-                      }}
+                      sx={
+                        {
+                          // fontSize: "18px",
+                        }
+                      }
                     />
-                  ) : (
-                    ""
-                  )}
-                </div>
+                  </div>
+                </>
+                {/* ) : (
+                  ""
+                )} */}
               </div>
             );
           })}
 
           <div className="row">
-            <div className="col-sm-12 text-end">
+            <div className="col-sm-12 text-start pb-3">
               <Button
                 variant="contained"
                 size="small"
                 style={{
-                  marginTop: "5px",
-                  backgroundColor: "#393E46",
-                  borderRadius: "50px",
+                  // marginTop: "5px",
+                  width: "161px",
+                  height: "50px",
+                  backgroundColor: "#FFC727",
+                  borderRadius: "12.695px",
+                  fontFamily: "Poppins",
+                  fontStyle: "normal",
+                  fontWeight: "500",
+                  fontSize: "15px",
+                  lineHeight: "22px",
+                  color: "rgba(0, 0, 0, 0.8)",
                 }}
                 onClick={addInputField}
               >
-                <AddIcon />
+                Add New
               </Button>
             </div>
           </div>
