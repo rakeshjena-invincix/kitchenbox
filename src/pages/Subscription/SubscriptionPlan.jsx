@@ -13,7 +13,8 @@ import Modal from "react-bootstrap/Modal";
 import subscriptionBanner from "../../assets/images/Meal Subscription 1.png";
 import card1 from "../../assets/images/Rectangle 73.png";
 import card2 from "../../assets/images/Rectangle 76.png";
-import Navbar from "../../components/AddRemoveInputField/Navbar";
+import Navbar from "../../components/Navbar";
+import Banner from "./../../components/Banner";
 import "./../Home/Home.css";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -33,26 +34,7 @@ const SubscriptionPlan = () => {
     <>
       <Navbar />
       <section className="container" style={{ marginTop: "83px" }}>
-        <div
-          id="carouselExampleIndicators"
-          className="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img
-                src={subscriptionBanner}
-                className="w-100 d-none d-sm-block"
-                alt="..."
-              />
-              <img
-                src={subscriptionBanner}
-                className="d-block w-100 d-sm-none"
-                alt="..."
-              />
-            </div>
-          </div>
-        </div>
+        <Banner imgBanner={subscriptionBanner} />
 
         <h6 className="text-center mt-3 ">Veg Only</h6>
         <div className="row d-flex justify-content-center mb-5">

@@ -8,7 +8,8 @@ import dishes3 from "../../assets/images/dishes-3.svg";
 import cateringOrderBanner from "../../assets/images/Meal Subscription 1 (1).png";
 import NonVeg from "../../assets/images/non-veg.png";
 import veg from "../../assets/images/veg.png";
-import Navbar from "../../components/AddRemoveInputField/Navbar";
+import Navbar from "../../components/Navbar";
+import Banner from "./../../components/Banner";
 
 import "../Home/Home.css";
 const CateringOrder = () => {
@@ -20,26 +21,7 @@ const CateringOrder = () => {
     <>
       <Navbar />
       <section className="container" style={{ marginTop: "83px" }}>
-        <div
-          id="carouselExampleIndicators"
-          className="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img
-                src={cateringOrderBanner}
-                className="w-100 d-none d-sm-block"
-                alt="..."
-              />
-              <img
-                src={cateringOrderBanner}
-                className="d-block w-100 d-sm-none"
-                alt="..."
-              />
-            </div>
-          </div>
-        </div>
+        <Banner imgBanner={cateringOrderBanner} />
 
         <div className="container">
           <div className="row">

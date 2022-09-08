@@ -4,7 +4,7 @@ import { Button } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
-import AddRemoveInputField from "../../components/AddRemoveInputField/AddRemoveInputField";
+import AddRemoveInputField from "../../components/AddRemoveInputField";
 import "./billing.css";
 const Billing = () => {
   const [items, setItems] = useState([]);
