@@ -389,7 +389,7 @@ a.downloadmenu {
 } */
 
 hr {
-  width: 5%;
+  width: 5% !important;
   margin: 12px auto;
   height: 4px;
   background: #ffc300;
