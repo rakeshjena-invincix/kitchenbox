@@ -1,13 +1,12 @@
 import { Delete } from "@mui/icons-material";
 import AddIcon from "@mui/icons-material/Add";
-import RemoveIcon from "@mui/icons-material/Remove";
 import { Button } from "@mui/material";
 import Autocomplete from "@mui/material/Autocomplete";
 import TextField from "@mui/material/TextField";
 import { useEffect, useState } from "react";
 const AddRemoveInputField = ({ handlePrice }) => {
   const [quantity, setQuantity] = useState(null);
-  console.log(quantity);
+
   const [currentItemId, setCurrentItemId] = useState(null);
 
   const [inputFields, setInputFields] = useState([
@@ -193,8 +192,8 @@ const AddRemoveInputField = ({ handlePrice }) => {
                   {inputFields.length !== 1 ? (
                     <Delete
                       onClick={() => removeInputFields(index)}
-                      color="#EB1D36"
-                      style={{
+                      sx={{
+                        color: "#EB1D36",
                         cursor: "pointer",
                         fontSize: "18px",
                       }}
@@ -221,24 +220,6 @@ const AddRemoveInputField = ({ handlePrice }) => {
               >
                 <AddIcon />
               </Button>
-              {inputFields.length !== 1 ? (
-                <>
-                  <Button
-                    variant="contained"
-                    size="small"
-                    style={{
-                      marginTop: "5px",
-                      backgroundColor: "#EB1D36",
-                      borderRadius: "50px",
-                    }}
-                    onClick={removeInputFields}
-                  >
-                    <RemoveIcon />
-                  </Button>
-                </>
-              ) : (
-                ""
-              )}
             </div>
           </div>
         </div>
