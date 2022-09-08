@@ -120,7 +120,6 @@ const AddRemoveInputField = ({ handlePrice }) => {
         <div className="col-sm-12">
           {inputFields.map((data, index) => {
             const { item_name, item_price, quantity, total, item_id } = data;
-            console.log(item_name);
             return (
               <div className="row my-3" key={index}>
                 <div className="col-11 d-flex ">
