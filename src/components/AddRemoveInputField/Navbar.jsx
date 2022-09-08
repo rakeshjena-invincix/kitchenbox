@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import { Percent } from "@mui/icons-material";
+import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
@@ -14,7 +15,7 @@ const Navbar = () => {
           <div className="container">
             <Link className="navbar-brand" to="/">
               <img
-                style={{ width: "85px", position: "absolute", top: "9px" }}
+                style={{ width: "35px", position: "", top: "" }}
                 src={logo}
                 alt=""
               />
@@ -27,8 +28,14 @@ const Navbar = () => {
               aria-controls="navbarNavAltMarkup"
               aria-expanded="false"
               aria-label="Toggle navigation"
+              style={{
+                outline: "none",
+                background: "transparent",
+                border: "none",
+              }}
             >
-              <span className="navbar-toggler-icon"></span>
+              <MenuIcon />
+              {/* <span className="navbar-toggler-icon"></span> */}
             </button>
             <div
               className="collapse navbar-collapse"
