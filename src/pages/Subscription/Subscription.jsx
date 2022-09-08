@@ -8,7 +8,7 @@ import card4 from "../../assets/images/Rectangle 38.png";
 import card5 from "../../assets/images/Rectangle 39.png";
 import card6 from "../../assets/images/Rectangle 40.png";
 import addBtn from "../../assets/images/Vector.png";
-import { Banner } from "../../components/Banner";
+import Banner from "../../components/Banner";
 import Navbar from "../../components/Navbar";
 const Subscription = () => {
   return (

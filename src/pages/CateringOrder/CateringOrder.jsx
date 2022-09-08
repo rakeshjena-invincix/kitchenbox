@@ -9,7 +9,7 @@ import cateringOrderBanner from "../../assets/images/Meal Subscription 1 (1).png
 import NonVeg from "../../assets/images/non-veg.png";
 import veg from "../../assets/images/veg.png";
 import Navbar from "../../components/Navbar";
-import { Banner } from "./../../components/Banner";
+import Banner from "./../../components/Banner";
 
 import "../Home/Home.css";
 const CateringOrder = () => {

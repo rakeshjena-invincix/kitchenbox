@@ -14,7 +14,7 @@ import subscriptionBanner from "../../assets/images/Meal Subscription 1.png";
 import card1 from "../../assets/images/Rectangle 73.png";
 import card2 from "../../assets/images/Rectangle 76.png";
 import Navbar from "../../components/Navbar";
-import { Banner } from "./../../components/Banner";
+import Banner from "./../../components/Banner";
 import "./../Home/Home.css";
 
 const Item = styled(Paper)(({ theme }) => ({
