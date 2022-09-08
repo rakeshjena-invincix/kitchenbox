@@ -136,9 +136,11 @@ const HomePage = () => {
             {/* <h2>Our offerings</h2> */}
             <div className="row">
               <div className="col-md-3 col-sm-6 col-xs-12">
-                <div className="allorder-1">
-                  <img src={order1} alt="" />
-                </div>
+                <Link to="/">
+                  <div className="allorder-1">
+                    <img src={order1} alt="" />
+                  </div>
+                </Link>
               </div>
 
               <div className="col-md-3 col-sm-6 col-xs-12">
@@ -150,15 +152,19 @@ const HomePage = () => {
               </div>
 
               <div className="col-md-3 col-sm-6 col-xs-12">
-                <div className="allorder-1">
-                  <img src={order3} alt="" />
-                </div>
+                <Link to="/pre-order">
+                  <div className="allorder-1">
+                    <img src={order3} alt="" />
+                  </div>
+                </Link>
               </div>
 
               <div className="col-md-3 col-sm-6 col-xs-12">
-                <div className="allorder-1">
-                  <img src={order4} alt="" />
-                </div>
+                <Link to="/catering-orders">
+                  <div className="allorder-1">
+                    <img src={order4} alt="" />
+                  </div>
+                </Link>
               </div>
             </div>
           </div>
