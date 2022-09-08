@@ -3,13 +3,14 @@ import preorderBanner from "../../assets/images/Meal Subscription 3.png";
 import Navbar from "../../components/AddRemoveInputField/Navbar";
 import { Link } from "react-router-dom";
 import addBtn from "../../assets/images/Vector.png";
-import card1 from "../../assets/images/Rectangle 35.png";
+import card1 from "../../assets/images/Rectangle 121.png";
 import card2 from "../../assets/images/Rectangle 36.png";
 import card3 from "../../assets/images/Rectangle 37.png";
 import card4 from "../../assets/images/Rectangle 38.png";
 import card5 from "../../assets/images/Rectangle 39.png";
 import card6 from "../../assets/images/Rectangle 40.png";
 import Button from "@mui/material/Button";
+import StarIcon from "@mui/icons-material/Star";
 
 const PreOrder = () => {
   return (
@@ -48,11 +49,29 @@ const PreOrder = () => {
               <Link to="/">
                 <div className="offercard_1">
                   <img src={card1} alt="" className="card_img" />
-                  <div className="card_text d-flex justify-content-between align-items-center flex-column">
-                    <div className="d-flex justify-content-between align-items-center mt-4">
-                      <p>4.7</p>
-                      <p>60-80 min</p>
+                  <div className="card_text d-flex justify-content-between flex-column">
+                    <div className="card-contain">
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        <StarIcon fontSize="3px" style={{ color: "#FFC727" }} />{" "}
+                        4.7
+                      </div>
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        60-80min
+                      </div>
                     </div>
+
                     <div>
                       <h3>Crispy Masala Dosa</h3>
                       <p>
@@ -61,17 +80,31 @@ const PreOrder = () => {
                       </p>
                     </div>
                     <div className="AddBtnd d-flex justify-content-between align-items-center">
-                      <h1
+                      <div
                         style={{
-                          fontSize: "20px",
-                          lineHeight: "30px",
-                          marginRight: "17px",
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          justifyContent: "space-between",
                         }}
                       >
-                        ₹ 120
-                      </h1>
-                      <div className="d-flex">
-                        <p style={{ fontSize: "10px", lineHeight: "15px" }}>
+                        <h1
+                          style={{
+                            fontSize: "20px",
+                            lineHeight: "30px",
+                            marginRight: "0px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          ₹ 120
+                        </h1>
+                        <p
+                          style={{
+                            fontSize: "10px",
+                            lineHeight: "15px",
+                            marginBottom: "0px",
+                          }}
+                        >
                           Customizable
                         </p>
                         <Button
@@ -93,21 +126,76 @@ const PreOrder = () => {
             <div className="col-md-3 col-sm-6 col-xs-12">
               <Link to="/">
                 <div className="offercard_1">
-                  <img src={card3} alt="" className="card_img" />
-                  <div className="card_text d-flex justify-content-between align-items-center">
+                  <img src={card1} alt="" className="card_img" />
+                  <div className="card_text d-flex justify-content-between flex-column">
+                    <div className="card-contain">
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        <StarIcon fontSize="3px" style={{ color: "#FFC727" }} />{" "}
+                        4.7
+                      </div>
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        60-80min
+                      </div>
+                    </div>
+
                     <div>
-                      <h3>Satvik (No Onion & Garlic)</h3>
+                      <h3>Crispy Masala Dosa</h3>
                       <p>
-                        Weekly Starting from - ₹ 1000 <br /> Monthly Starting
-                        from - ₹ 4000
+                        Dosa is a popular south indian thin <br /> crepe made
+                        with fermented rice <br /> and lentil batter.
                       </p>
                     </div>
-                    <div className="AddBtn">
-                      <img
-                        style={{ width: "26.67px", height: "18.67px" }}
-                        src={addBtn}
-                        alt=""
-                      />
+                    <div className="AddBtnd d-flex justify-content-between align-items-center">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          justifyContent: "space-between",
+                        }}
+                      >
+                        <h1
+                          style={{
+                            fontSize: "20px",
+                            lineHeight: "30px",
+                            marginRight: "0px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          ₹ 120
+                        </h1>
+                        <p
+                          style={{
+                            fontSize: "10px",
+                            lineHeight: "15px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          Customizable
+                        </p>
+                        <Button
+                          variant="contained"
+                          style={{
+                            marginTop: "5px",
+                            backgroundColor: "#FFC727",
+                            borderRadius: "50px",
+                          }}
+                        >
+                          Add
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -116,21 +204,76 @@ const PreOrder = () => {
             <div className="col-md-3 col-sm-6 col-xs-12">
               <Link to="/">
                 <div className="offercard_1">
-                  <img src={card2} alt="" className="card_img" />
-                  <div className="card_text d-flex justify-content-between align-items-center">
+                  <img src={card1} alt="" className="card_img" />
+                  <div className="card_text d-flex justify-content-between flex-column">
+                    <div className="card-contain">
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        <StarIcon fontSize="3px" style={{ color: "#FFC727" }} />{" "}
+                        4.7
+                      </div>
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        60-80min
+                      </div>
+                    </div>
+
                     <div>
-                      <h3>Veg & Non-Veg Combo</h3>
+                      <h3>Crispy Masala Dosa</h3>
                       <p>
-                        Weekly Starting from - ₹ 1200 <br /> Monthly Starting
-                        from - ₹ 4800
+                        Dosa is a popular south indian thin <br /> crepe made
+                        with fermented rice <br /> and lentil batter.
                       </p>
                     </div>
-                    <div className="AddBtn">
-                      <img
-                        style={{ width: "26.67px", height: "18.67px" }}
-                        src={addBtn}
-                        alt=""
-                      />
+                    <div className="AddBtnd d-flex justify-content-between align-items-center">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          justifyContent: "space-between",
+                        }}
+                      >
+                        <h1
+                          style={{
+                            fontSize: "20px",
+                            lineHeight: "30px",
+                            marginRight: "0px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          ₹ 120
+                        </h1>
+                        <p
+                          style={{
+                            fontSize: "10px",
+                            lineHeight: "15px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          Customizable
+                        </p>
+                        <Button
+                          variant="contained"
+                          style={{
+                            marginTop: "5px",
+                            backgroundColor: "#FFC727",
+                            borderRadius: "50px",
+                          }}
+                        >
+                          Add
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -139,21 +282,76 @@ const PreOrder = () => {
             <div className="col-md-3 col-sm-6 col-xs-12">
               <Link to="/">
                 <div className="offercard_1">
-                  <img src={card4} alt="" className="card_img" />
-                  <div className="card_text d-flex justify-content-between align-items-center">
+                  <img src={card1} alt="" className="card_img" />
+                  <div className="card_text d-flex justify-content-between flex-column">
+                    <div className="card-contain">
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        <StarIcon fontSize="3px" style={{ color: "#FFC727" }} />{" "}
+                        4.7
+                      </div>
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        60-80min
+                      </div>
+                    </div>
+
                     <div>
-                      <h3>Non-Veg Only</h3>
+                      <h3>Crispy Masala Dosa</h3>
                       <p>
-                        Weekly Starting from - ₹ 1400 <br /> Monthly Starting
-                        from - ₹ 5600
+                        Dosa is a popular south indian thin <br /> crepe made
+                        with fermented rice <br /> and lentil batter.
                       </p>
                     </div>
-                    <div className="AddBtn">
-                      <img
-                        style={{ width: "26.67px", height: "18.67px" }}
-                        src={addBtn}
-                        alt=""
-                      />
+                    <div className="AddBtnd d-flex justify-content-between align-items-center">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          justifyContent: "space-between",
+                        }}
+                      >
+                        <h1
+                          style={{
+                            fontSize: "20px",
+                            lineHeight: "30px",
+                            marginRight: "0px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          ₹ 120
+                        </h1>
+                        <p
+                          style={{
+                            fontSize: "10px",
+                            lineHeight: "15px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          Customizable
+                        </p>
+                        <Button
+                          variant="contained"
+                          style={{
+                            marginTop: "5px",
+                            backgroundColor: "#FFC727",
+                            borderRadius: "50px",
+                          }}
+                        >
+                          Add
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -162,21 +360,76 @@ const PreOrder = () => {
             <div className="col-md-3 col-sm-6 col-xs-12">
               <Link to="/">
                 <div className="offercard_1">
-                  <img src={card6} alt="" className="card_img" />
-                  <div className="card_text d-flex justify-content-between align-items-center">
+                  <img src={card1} alt="" className="card_img" />
+                  <div className="card_text d-flex justify-content-between flex-column">
+                    <div className="card-contain">
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        <StarIcon fontSize="3px" style={{ color: "#FFC727" }} />{" "}
+                        4.7
+                      </div>
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        60-80min
+                      </div>
+                    </div>
+
                     <div>
-                      <h3>Odisha Special</h3>
+                      <h3>Crispy Masala Dosa</h3>
                       <p>
-                        Weekly Starting from - ₹ 1100 <br /> Monthly Starting
-                        from - ₹ 4400
+                        Dosa is a popular south indian thin <br /> crepe made
+                        with fermented rice <br /> and lentil batter.
                       </p>
                     </div>
-                    <div className="AddBtn">
-                      <img
-                        style={{ width: "26.67px", height: "18.67px" }}
-                        src={addBtn}
-                        alt=""
-                      />
+                    <div className="AddBtnd d-flex justify-content-between align-items-center">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          justifyContent: "space-between",
+                        }}
+                      >
+                        <h1
+                          style={{
+                            fontSize: "20px",
+                            lineHeight: "30px",
+                            marginRight: "0px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          ₹ 120
+                        </h1>
+                        <p
+                          style={{
+                            fontSize: "10px",
+                            lineHeight: "15px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          Customizable
+                        </p>
+                        <Button
+                          variant="contained"
+                          style={{
+                            marginTop: "5px",
+                            backgroundColor: "#FFC727",
+                            borderRadius: "50px",
+                          }}
+                        >
+                          Add
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -185,21 +438,76 @@ const PreOrder = () => {
             <div className="col-md-3 col-sm-6 col-xs-12">
               <Link to="/">
                 <div className="offercard_1">
-                  <img src={card5} alt="" className="card_img" />
-                  <div className="card_text d-flex justify-content-between align-items-center">
+                  <img src={card1} alt="" className="card_img" />
+                  <div className="card_text d-flex justify-content-between flex-column">
+                    <div className="card-contain">
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        <StarIcon fontSize="3px" style={{ color: "#FFC727" }} />{" "}
+                        4.7
+                      </div>
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        60-80min
+                      </div>
+                    </div>
+
                     <div>
-                      <h3>North Indian Special</h3>
+                      <h3>Crispy Masala Dosa</h3>
                       <p>
-                        Weekly Starting from - ₹ 1300 <br /> Monthly Starting
-                        from - ₹ 5200
+                        Dosa is a popular south indian thin <br /> crepe made
+                        with fermented rice <br /> and lentil batter.
                       </p>
                     </div>
-                    <div className="AddBtn">
-                      <img
-                        style={{ width: "26.67px", height: "18.67px" }}
-                        src={addBtn}
-                        alt=""
-                      />
+                    <div className="AddBtnd d-flex justify-content-between align-items-center">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          justifyContent: "space-between",
+                        }}
+                      >
+                        <h1
+                          style={{
+                            fontSize: "20px",
+                            lineHeight: "30px",
+                            marginRight: "0px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          ₹ 120
+                        </h1>
+                        <p
+                          style={{
+                            fontSize: "10px",
+                            lineHeight: "15px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          Customizable
+                        </p>
+                        <Button
+                          variant="contained"
+                          style={{
+                            marginTop: "5px",
+                            backgroundColor: "#FFC727",
+                            borderRadius: "50px",
+                          }}
+                        >
+                          Add
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -208,21 +516,76 @@ const PreOrder = () => {
             <div className="col-md-3 col-sm-6 col-xs-12">
               <Link to="/">
                 <div className="offercard_1">
-                  <img src={card5} alt="" className="card_img" />
-                  <div className="card_text d-flex justify-content-between align-items-center">
+                  <img src={card1} alt="" className="card_img" />
+                  <div className="card_text d-flex justify-content-between flex-column">
+                    <div className="card-contain">
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        <StarIcon fontSize="3px" style={{ color: "#FFC727" }} />{" "}
+                        4.7
+                      </div>
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        60-80min
+                      </div>
+                    </div>
+
                     <div>
-                      <h3>North Indian Special</h3>
+                      <h3>Crispy Masala Dosa</h3>
                       <p>
-                        Weekly Starting from - ₹ 1300 <br /> Monthly Starting
-                        from - ₹ 5200
+                        Dosa is a popular south indian thin <br /> crepe made
+                        with fermented rice <br /> and lentil batter.
                       </p>
                     </div>
-                    <div className="AddBtn">
-                      <img
-                        style={{ width: "26.67px", height: "18.67px" }}
-                        src={addBtn}
-                        alt=""
-                      />
+                    <div className="AddBtnd d-flex justify-content-between align-items-center">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          justifyContent: "space-between",
+                        }}
+                      >
+                        <h1
+                          style={{
+                            fontSize: "20px",
+                            lineHeight: "30px",
+                            marginRight: "0px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          ₹ 120
+                        </h1>
+                        <p
+                          style={{
+                            fontSize: "10px",
+                            lineHeight: "15px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          Customizable
+                        </p>
+                        <Button
+                          variant="contained"
+                          style={{
+                            marginTop: "5px",
+                            backgroundColor: "#FFC727",
+                            borderRadius: "50px",
+                          }}
+                        >
+                          Add
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -230,22 +593,77 @@ const PreOrder = () => {
             </div>
             <div className="col-md-3 col-sm-6 col-xs-12">
               <Link to="/">
-                <div className="offercard_1" style={{}}>
-                  <img src={card5} alt="" className="card_img" />
-                  <div className="card_text d-flex justify-content-between align-items-center">
+                <div className="offercard_1">
+                  <img src={card1} alt="" className="card_img" />
+                  <div className="card_text d-flex justify-content-between flex-column">
+                    <div className="card-contain">
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        <StarIcon fontSize="3px" style={{ color: "#FFC727" }} />{" "}
+                        4.7
+                      </div>
+                      <div
+                        style={{
+                          background: "rgba(0, 0, 0, 0.8)",
+                          padding: "2px 8px",
+                          borderRadius: "5px",
+                        }}
+                      >
+                        60-80min
+                      </div>
+                    </div>
+
                     <div>
-                      <h3>North Indian Special</h3>
+                      <h3>Crispy Masala Dosa</h3>
                       <p>
-                        Weekly Starting from - ₹ 1300 <br /> Monthly Starting
-                        from - ₹ 5200
+                        Dosa is a popular south indian thin <br /> crepe made
+                        with fermented rice <br /> and lentil batter.
                       </p>
                     </div>
-                    <div className="AddBtn">
-                      <img
-                        style={{ width: "26.67px", height: "18.67px" }}
-                        src={addBtn}
-                        alt=""
-                      />
+                    <div className="AddBtnd d-flex justify-content-between align-items-center">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          width: "100%",
+                          justifyContent: "space-between",
+                        }}
+                      >
+                        <h1
+                          style={{
+                            fontSize: "20px",
+                            lineHeight: "30px",
+                            marginRight: "0px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          ₹ 120
+                        </h1>
+                        <p
+                          style={{
+                            fontSize: "10px",
+                            lineHeight: "15px",
+                            marginBottom: "0px",
+                          }}
+                        >
+                          Customizable
+                        </p>
+                        <Button
+                          variant="contained"
+                          style={{
+                            marginTop: "5px",
+                            backgroundColor: "#FFC727",
+                            borderRadius: "50px",
+                          }}
+                        >
+                          Add
+                        </Button>
+                      </div>
                     </div>
                   </div>
                 </div>

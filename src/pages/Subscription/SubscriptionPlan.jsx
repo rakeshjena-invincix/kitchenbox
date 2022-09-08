@@ -427,17 +427,109 @@ const SubscriptionPlan = () => {
           </div>
         </div>
       </section>
-      <Modal show={show} onHide={handleClose} centered>
+      <Modal show={show} onHide={handleClose} size="lg" centered>
         <Modal.Header closeButton>
           <Modal.Title>Summary</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <div className="container">
+            <p className="">Meals:</p>
             <div className="row">
-              <p className="">Meals:</p>
+              <div className="col-6 d-flex">
+                <div className="row mb-3">
+                  <div className="col-md-3">
+                    <img src={card1} width="100%" />
+                  </div>
+                  <div className="col-md-9">
+                    <div>
+                      <span style={{ fontSize: "14px", fontWeight: "700" }}>
+                        Monday
+                      </span>{" "}
+                      <br />{" "}
+                      <span style={{ fontSize: "12px", fontWeight: "500" }}>
+                        Lunch :
+                      </span>
+                      Mix Veg, Dal, Roti, Rice, Papad <br />{" "}
+                      <span style={{ fontSize: "12px", fontWeight: "500" }}>
+                        Dinner :
+                      </span>{" "}
+                      Paneer Masala, Roti, Rice, Papad
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6 d-flex">
+                <div className="row mb-3">
+                  <div className="col-md-3">
+                    <img src={card1} width="100%" />
+                  </div>
+                  <div className="col-md-9">
+                    <div>
+                      <span style={{ fontSize: "14px", fontWeight: "700" }}>
+                        Tuesday
+                      </span>{" "}
+                      <br />{" "}
+                      <span style={{ fontSize: "12px", fontWeight: "500" }}>
+                        Lunch :
+                      </span>
+                      Mix Veg, Dal, Roti, Rice, Papad <br />{" "}
+                      <span style={{ fontSize: "12px", fontWeight: "500" }}>
+                        Dinner :
+                      </span>{" "}
+                      Paneer Masala, Roti, Rice, Papad
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-6 d-flex">
+                <div className="row mb-3">
+                  <div className="col-md-3">
+                    <img src={card1} width="100%" />
+                  </div>
+                  <div className="col-md-9">
+                    <div>
+                      <span style={{ fontSize: "14px", fontWeight: "700" }}>
+                        Wednesday
+                      </span>{" "}
+                      <br />{" "}
+                      <span style={{ fontSize: "12px", fontWeight: "500" }}>
+                        Lunch :
+                      </span>
+                      Mix Veg, Dal, Roti, Rice, Papad <br />{" "}
+                      <span style={{ fontSize: "12px", fontWeight: "500" }}>
+                        Dinner :
+                      </span>{" "}
+                      Paneer Masala, Roti, Rice, Papad
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-              <div className="col-6"></div>
-              <div className="col-6"></div>
+              <h6 className="mt-3">Days :</h6>
+              <p className="ms-3">Monthly</p>
+              <h6> Meal Preference :</h6>
+              <p className="ms-3">Both(Lunch & Dinner)</p>
+              <h6> Budget :</h6>
+              <p className="ms-3">Premium</p>
+              <div className="d-flex justify-content-between">
+                <h6> Sub Total :</h6>
+                <span>₹ 4800</span>
+              </div>
+
+              <Button
+                className="ms-auto p-2 bd-highlight"
+                variant="contained"
+                style={{
+                  marginTop: "5px",
+                  backgroundColor: "#FFC727",
+                  borderRadius: "58px",
+                  width: "230px",
+                  height: "40px",
+                  color: "#00000080",
+                }}
+              >
+                CHECKOUT
+              </Button>
             </div>
           </div>
         </Modal.Body>
