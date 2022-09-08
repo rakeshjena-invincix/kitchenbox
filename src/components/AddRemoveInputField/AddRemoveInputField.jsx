@@ -71,6 +71,9 @@ const AddRemoveInputField = ({ handlePrice }) => {
   };
 
   const removeInputFields = (index) => {
+    console.log(index);
+    console.log(rows);
+
     const rows = [...inputFields];
     // rows.splice(index, 1);
     rows.pop();
