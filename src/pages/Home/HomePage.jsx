@@ -31,7 +31,7 @@ import {
 import topselling4 from "../../assets/images/top-selling-4.svg";
 import topselling5 from "../../assets/images/top-selling-5.svg";
 import veg from "../../assets/images/veg.png";
-import Navbar from "../../components/AddRemoveInputField/Navbar";
+import Navbar from "../../components/Navbar";
 import MyVerticallyCenteredModal from "../Login/MyVerticallyCenteredModal";
 import "./Home.css";
 const HomePage = () => {

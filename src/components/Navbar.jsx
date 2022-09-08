@@ -3,9 +3,10 @@ import { Percent } from "@mui/icons-material";
 import MenuIcon from "@mui/icons-material/Menu";
 import React from "react";
 import { Link } from "react-router-dom";
-import account from "./../../assets/images/Vector (1).png";
-import cart from "./../../assets/images/Vector (2).png";
-import "./../../pages/Home/Home.css";
+import account from "../assets/images/Vector (1).png";
+import cart from "../assets/images/Vector (2).png";
+import "../pages/Home/Home.css";
+
 const Navbar = () => {
   return (
     <>

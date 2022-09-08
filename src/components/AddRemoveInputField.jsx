@@ -168,7 +168,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                         onChange={(event) =>
                           handleQuantityChange(index, event.target.value, data)
                         }
-                        value={quantity}
+                        // value={quantity}
                         name="quantity"
                       />
                     </div>

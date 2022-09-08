@@ -8,32 +8,14 @@ import card4 from "../../assets/images/Rectangle 38.png";
 import card5 from "../../assets/images/Rectangle 39.png";
 import card6 from "../../assets/images/Rectangle 40.png";
 import addBtn from "../../assets/images/Vector.png";
-import Navbar from "../../components/AddRemoveInputField/Navbar";
+import { Banner } from "../../components/Banner";
+import Navbar from "../../components/Navbar";
 const Subscription = () => {
   return (
     <>
       <Navbar />
       <section className="container" style={{ marginTop: "83px" }}>
-        <div
-          id="carouselExampleIndicators"
-          className="carousel slide"
-          data-bs-ride="carousel"
-        >
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img
-                src={subscriptionBanner}
-                className="w-100 d-none d-sm-block"
-                alt="..."
-              />
-              <img
-                src={subscriptionBanner}
-                className="d-block w-100 d-sm-none"
-                alt="..."
-              />
-            </div>
-          </div>
-        </div>
+        <Banner imgBanner={subscriptionBanner} />
 
         <div className="food-banner">
           <div className="container">
