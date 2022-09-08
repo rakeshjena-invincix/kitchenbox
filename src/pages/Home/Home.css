@@ -356,14 +356,7 @@ a.downloadmenu {
 .card_text p {
   font-size: 11px;
 }
-.AddBtn {
-  /* position: relative; */
-  /* top: -155px;
-  left: 5px; */
-}
-/* .offercard_1 {
-  margin-bottom: -82px;
-} */
+
 .offercard_1 img {
   width: 100%;
 }
@@ -372,21 +365,6 @@ a.downloadmenu {
   border-radius: 5px;
   overflow: hidden;
 }
-/* .offercard_1 :before {
-  content: "";
-  height: 100%;
-  width: 100%;
-  background: #0000005c;
-  position: absolute;
-  border-radius: 13px;
-  background: linear-gradient(
-    185deg,
-    rgb(2 0 36 / 0%) 0%,
-    rgb(0 0 0 / 0%) 20%,
-    rgb(0 0 0 / 25%) 59%,
-    rgb(0 0 0) 100%
-  );
-} */
 
 hr {
   width: 5%;
