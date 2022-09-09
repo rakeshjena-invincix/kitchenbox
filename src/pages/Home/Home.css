@@ -410,3 +410,9 @@ a.downloadmenu {
     rgb(0 0 0) 100%
   );
 }
+.MuiFormControl-root {
+  width: 100% !important;
+}
+.MuiOutlinedInput-root {
+  margin-bottom: "15px" !important;
+}
