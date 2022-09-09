@@ -100,13 +100,15 @@ const AddRemoveInputField = ({ handlePrice }) => {
     console.log("selectedOptions ", selectedOptions);
     const list = [...inputFields];
 
+    console.log((list[index]["item_price"] = selectedOptions.item_price));
+    console.log(list);
+
     // list[index]["dish"] = selectedOptions.label;
     list[index]["item_price"] = selectedOptions.item_price;
     // list[index]["item_category"] = selectedOptions.item_category;
     list[index]["item_quantity"] = selectedOptions.item_quantity;
     list[index]["item_metric"] = selectedOptions.item_metric;
     list[index][name] = value;
-    console.log("list ", list);
     setInputFields(list);
     handlePrice(list);
   };
@@ -115,15 +117,15 @@ const AddRemoveInputField = ({ handlePrice }) => {
 
   return (
     <div className="container">
-      <div className="row">
-        <div className="col-sm-12">
+      <div className="">
+        <div className="">
           {inputFields.map((data, index) => {
             const { item_name, item_price, quantity, total, item_id } = data;
             return (
-              <div className="row my-3" key={index}>
-                <div className="col-11 d-flex ">
-                  <div className="row">
-                    <div className="form-group col-sm-4 p-1 mx-3">
+              <div className="" key={index}>
+                <div className="">
+                  <div className="row mb-3">
+                    <div className="form-group col-sm-4 pb-2 ">
                       <Autocomplete
                         disableClearable
                         id="dish"
@@ -146,7 +148,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                       />
                     </div>
 
-                    <div className="form-group col-sm-2 p-1  mx-3">
+                    <div className="form-group col-sm-2 pb-2">
                       <TextField
                         disabled
                         id="price"
@@ -158,7 +160,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                         name="item_price"
                       />
                     </div>
-                    <div className="form-group col-sm-2 p-1  mx-3">
+                    <div className="form-group col-sm-2  pb-2 ">
                       <TextField
                         id="quantity"
                         label="Quantity"
@@ -172,7 +174,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
                       />
                     </div>
 
-                    <div className="form-group col-sm-2 p-1  mx-3">
+                    <div className="form-group col-sm-2  pb-2 ">
                       <TextField
                         disabled
                         id="total"
@@ -184,33 +186,47 @@ const AddRemoveInputField = ({ handlePrice }) => {
                         name="total"
                       />
                     </div>
+                    <>
+                      <div
+                        className="col-2"
+                        // style={{
+                        //   // position: "absolute",
+                        //   background: "#FFC727",
+                        //   borderRadius: "12.695px",
+                        //   width: "40px",
+                        //   height: "40px",
+                        //   left: "1440px",
+                        //   top: "1024px",
+                        //   cursor: "pointer",
+                        // }}
+                      >
+                        <div
+                          style={{
+                            background: "#fed100",
+                            width: "40px",
+                            height: "40px",
+                            margin: "8px auto",
+                            textAlign: "center",
+                            padding: "7px",
+                            borderRadius: "10px",
+                            cursor: "pointer",
+                          }}
+                          onClick={() => removeInputFields(index)}
+                        >
+                          <Delete
+                            sx={
+                              {
+                                // fontSize: "18px",
+                              }
+                            }
+                          />
+                        </div>
+                      </div>
+                    </>
                   </div>
                 </div>
                 {/* {inputFields.length !== 1 ? ( */}
-                <>
-                  <div
-                    className="col-2"
-                    style={{
-                      // position: "absolute",
-                      background: "#FFC727",
-                      borderRadius: "12.695px",
-                      width: "40px",
-                      height: "40px",
-                      left: "1440px",
-                      top: "1024px",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => removeInputFields(index)}
-                  >
-                    <Delete
-                      sx={
-                        {
-                          // fontSize: "18px",
-                        }
-                      }
-                    />
-                  </div>
-                </>
+
                 {/* ) : (
                   ""
                 )} */}
