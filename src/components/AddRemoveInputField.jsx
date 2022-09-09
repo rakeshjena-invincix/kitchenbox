@@ -34,7 +34,7 @@ const AddRemoveInputField = ({ handlePrice }) => {
 
     if (quantity) {
       const list = [...inputFields];
-
+      console.log("object");
       // list[index]["dish"] = selectedOptions.label;
       list[currentItemId]["item_price"] = selectedOptions.item_price;
       list[currentItemId]["quantity"] = quantity;
@@ -43,8 +43,10 @@ const AddRemoveInputField = ({ handlePrice }) => {
       console.log("list ", list);
 
       setInputFields((oldFields) => (oldFields = list));
+
       handlePrice(list);
     }
+    // setQuantity(0);
   }, [quantity]);
 
   const handleQuantityChange = (item_id, quantity, value) => {
@@ -97,29 +99,46 @@ const AddRemoveInputField = ({ handlePrice }) => {
 
   const handleChange = (index, event) => {
     const { name, value } = event.target;
-
+    console.log("Working", setQuantity, quantity);
     console.log("selectedOptions ", selectedOptions);
     const list = [...inputFields];
 
     console.log((list[index]["item_price"] = selectedOptions.item_price));
     console.log(list);
 
+    console.log("nnn ", selectedOptions["item_name"]);
+    console.log("ppp ", list[index]["item_name"]);
+
+    if (list[index]["item_name"] !== selectedOptions["item_name"]) {
+      console.log("selectedOptions new", selectedOptions);
+      list[index]["quantity"] = 0;
+      list[index]["total"] = 0;
+    }
+
     // list[index]["dish"] = selectedOptions.label;
     list[index]["item_price"] = selectedOptions.item_price;
     // list[index]["item_category"] = selectedOptions.item_category;
     list[index]["item_quantity"] = selectedOptions.item_quantity;
     list[index]["item_metric"] = selectedOptions.item_metric;
-    list[index]["total"] = 0;
 
     list[index][name] = value;
     setInputFields(list);
     handlePrice(list);
+    // setQuantity(0);
   };
+
   useEffect(() => {
     setQuantity();
   }, [selectedOptions]);
 
   // const handler = useCallback(debounce(index, event) => handleChange(index, event), 1500, []);
+  // useEffect(() => {
+  console.log("quantity", quantity);
+  //   if (quantity === null) {
+  //     setQuantity(0);
+  //   }
+  //   // setQuantity();
+  // }, [quantity]);
 
   return (
     <div className="container">
@@ -172,12 +191,19 @@ const AddRemoveInputField = ({ handlePrice }) => {
                         label="Quantity"
                         variant="outlined"
                         type="number"
-                        onChange={(event) =>
-                          handleQuantityChange(index, event.target.value, data)
-                        }
-                        // value={quantity}
+                        InputProps={{
+                          inputProps: { min: "0", max: "100000", step: "1" },
+                        }}
+                        onChange={(event) => {
+                          console.log("object", event.target.value);
+                          console.log(quantity);
+                          handleQuantityChange(index, event.target.value, data);
+                        }}
+                        defaultValue={quantity ? quantity : 0}
+                        value={parseInt(quantity)}
                         name="quantity"
                       />
+                      {/* <input value={quantity} /> */}
                     </div>
 
                     <div className="form-group col-sm-2  pb-2 ">
