@@ -368,7 +368,7 @@ a.downloadmenu {
   overflow: hidden;
 }
 
-hr {
+.hrBanner {
   width: 5% !important;
   margin: 12px auto;
   height: 4px;

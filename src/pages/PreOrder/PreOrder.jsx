@@ -19,7 +19,7 @@ const PreOrder = () => {
           <h2 className="text-center" style={{ fontSize: "32px" }}>
             Pre-Order
           </h2>
-          <hr />
+          <hr className="hrBanner" />
           <div className="row g-2">
             <div className="col-md-3 col-sm-6 col-xs-12">
               <Link to="/">

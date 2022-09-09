@@ -28,7 +28,7 @@ const CateringOrder = () => {
             <h2 className="text-center" style={{ fontSize: "32px" }}>
               Catering Orders
             </h2>
-            <hr />
+            <hr className="hrBanner" />
           </div>
         </div>
 
@@ -38,7 +38,7 @@ const CateringOrder = () => {
               <h2 className="text-center" style={{ fontSize: "32px" }}>
                 Economy
               </h2>
-              <hr />
+              <hr className="hrBanner" />
             </div>
             <div className="row">
               <div className="col-md-3">

@@ -1,4 +1,10 @@
-import { Button, FormControl, TextField } from "@mui/material";
+import {
+  Button,
+  FormControl,
+  TextField,
+  ToggleButton,
+  ToggleButtonGroup,
+} from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
@@ -7,6 +13,11 @@ import "./billing.css";
 const Billing = () => {
   const [items, setItems] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
+  const [alignment, setAlignment] = useState("web");
+
+  const handleOrderType = (event, newAlignment) => {
+    setAlignment(newAlignment);
+  };
   const handlePrice = (value, event) => {
     console.log(value, event);
     setItems(value);
@@ -73,7 +84,7 @@ const Billing = () => {
                       textTransform: "uppercase",
                     }}
                   >
-                    ORder id : #{Math.floor(Math.random() * 1000 + 1)}
+                    Order id : #{Math.floor(Math.random() * 1000 + 1)}
                   </h4>
                   <ul className="list list-unstyled mb-0">
                     <li
@@ -138,55 +149,158 @@ const Billing = () => {
                       {/* <Link to="/">
                         <img src={logo} width="40%" alt="logo" />
                       </Link> */}
-                      <p
-                        style={{
-                          fontFamily: "Poppins",
-                          fontStyle: "normal",
-                          fontWeight: "500",
-                          fontSize: "32px",
-                          lineHeight: "48px",
-                        }}
-                      >
-                        Customer Information
-                      </p>
-                      <p
-                        style={{
-                          fontFamily: "Poppins",
-                          fontStyle: "normal",
-                          fontWeight: "400",
-                          fontSize: "16px",
-                          lineHeight: "24px",
-                          color: "rgba(0, 0, 0, 0.6)",
-                        }}
-                      >
-                        Enter the details of the customer
-                      </p>
-                      <FormControl fullWidth sx={{ m: 1 }}>
-                        <TextField
-                          id="outlined-basic"
-                          label="Enter Customer Mobile Number"
-                          variant="outlined"
-                        />
-                      </FormControl>
-                      <FormControl fullWidth sx={{ m: 1 }}>
-                        <TextField
-                          id="outlined-basic"
-                          label="Enter Name"
-                          variant="outlined"
-                        />
-                      </FormControl>
-                      <FormControl fullWidth sx={{ m: 1 }}>
-                        <TextField
-                          id="outlined-basic"
-                          label="Enter Address"
-                          variant="outlined"
-                        />
-                      </FormControl>
+                      <div className="mb-3">
+                        <p
+                          style={{
+                            fontFamily: "Poppins",
+                            fontStyle: "normal",
+                            fontWeight: "500",
+                            fontSize: "32px",
+                            lineHeight: "48px",
+                          }}
+                        >
+                          Order Type
+                        </p>
+                        <p
+                          style={{
+                            fontFamily: "Poppins",
+                            fontStyle: "normal",
+                            fontWeight: "400",
+                            fontSize: "16px",
+                            lineHeight: "24px",
+                            color: "rgba(0, 0, 0, 0.6)",
+                          }}
+                        >
+                          Select Order Type
+                        </p>
+                        <ToggleButtonGroup
+                          color="warning"
+                          value={alignment}
+                          exclusive
+                          onChange={handleOrderType}
+                          aria-label="Platform"
+                          className="row"
+                        >
+                          <ToggleButton
+                            value="Instant Order"
+                            sx={{
+                              width: "156px",
+                              height: "39px",
+
+                              // border: "1.3px solid rgba(0, 0, 0, 0.2)",
+                              borderRadius: "6.5px",
+                              marginRight: "19px",
+                            }}
+                            style={{
+                              border: "1px solid #ccc",
+                              borderRadius: "6.5px",
+                            }}
+                          >
+                            Instant Order
+                          </ToggleButton>
+                          <ToggleButton
+                            value="Swiggy"
+                            sx={{
+                              width: "156px",
+                              height: "39px",
+                              marginRight: "19px",
+                              border: "1px solid #ccc",
+                              borderLeft: "1px solid #ccc",
+                              // border: "1.3px solid rgba(0, 0, 0, 0.2)",
+                            }}
+                            style={{
+                              border: "1px solid #ccc",
+                              borderRadius: "6.5px",
+                            }}
+                          >
+                            Swiggy
+                          </ToggleButton>
+                          <ToggleButton
+                            value="Zomato"
+                            sx={{
+                              width: "156px",
+                              height: "39px",
+                              marginRight: "19px",
+                              border: "1px solid #ccc",
+                              // border: "1.3px solid rgba(0, 0, 0, 0.2)",
+                              borderRadius: "6.5px",
+                            }}
+                            style={{
+                              border: "1px solid #ccc",
+                              borderRadius: "6.5px",
+                            }}
+                          >
+                            Zomato
+                          </ToggleButton>
+                          <ToggleButton
+                            value="Subscription"
+                            sx={{
+                              width: "156px",
+                              height: "39px",
+                              marginRight: "19px",
+                              border: "1px solid #ccc",
+                              // border: "1.3px solid rgba(0, 0, 0, 0.2)",
+                            }}
+                            style={{
+                              border: "1px solid #ccc",
+                              borderRadius: "6.5px",
+                            }}
+                          >
+                            Subscription
+                          </ToggleButton>
+                        </ToggleButtonGroup>
+                      </div>
+                      <div>
+                        <p
+                          style={{
+                            fontFamily: "Poppins",
+                            fontStyle: "normal",
+                            fontWeight: "500",
+                            fontSize: "32px",
+                            lineHeight: "48px",
+                          }}
+                        >
+                          Customer Information
+                        </p>
+                        <p
+                          style={{
+                            fontFamily: "Poppins",
+                            fontStyle: "normal",
+                            fontWeight: "400",
+                            fontSize: "16px",
+                            lineHeight: "24px",
+                            color: "rgba(0, 0, 0, 0.6)",
+                          }}
+                        >
+                          Enter the details of the customer
+                        </p>
+                        <FormControl fullWidth sx={{ m: 1 }}>
+                          <TextField
+                            id="outlined-basic"
+                            label="Enter Customer Mobile Number"
+                            variant="outlined"
+                          />
+                        </FormControl>
+                        <FormControl fullWidth sx={{ m: 1 }}>
+                          <TextField
+                            id="outlined-basic"
+                            label="Enter Name"
+                            variant="outlined"
+                          />
+                        </FormControl>
+                        <FormControl fullWidth sx={{ m: 1 }}>
+                          <TextField
+                            id="outlined-basic"
+                            label="Enter Address"
+                            variant="outlined"
+                          />
+                        </FormControl>
+                      </div>
                     </div>
                   </div>
 
                   <div className="col-md-6">
-                    <div className="mb-4 ">
+                    <div className="mb-3">
                       <div className="text-sm-right text-start">
                         {/* <h4 className="invoice-color mb-2 mt-md-2">
                           Order #{Math.floor(Math.random() * 1000 + 1)}
@@ -400,6 +514,13 @@ const Billing = () => {
                             </td>
                           </tr>
                           <tr>
+                            <hr
+                              style={{
+                                width: "142%",
+                              }}
+                            />
+                          </tr>
+                          <tr>
                             <th
                               className="text-start mt-3"
                               style={{
@@ -571,7 +692,7 @@ const Billing = () => {
                 </div>
                 <div className="col-sm-12">
                   <div className="row d-flex">
-                    <div className="col-md-3 col-sm-12 pb-1">
+                    <div className="col-md-2 col-sm-12 pb-1">
                       <Button
                         variant="contained"
                         size="small"
@@ -637,13 +758,13 @@ const Billing = () => {
                         Print Customer Invoice
                       </Button>
                     </div>
-                    <div className="col-md-3 col-sm-12 pb-1">
+                    <div className="col-md-4 col-sm-12 pb-1">
                       <Button
                         variant="contained"
                         size="small"
                         style={{
                           // marginTop: "5px",
-                          width: "161px",
+                          width: "211px",
                           height: "50px",
                           backgroundColor: "#FDB1DA",
                           borderRadius: "12.695px",

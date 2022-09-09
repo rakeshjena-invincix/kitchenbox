@@ -115,133 +115,140 @@ const AddRemoveInputField = ({ handlePrice }) => {
 
   return (
     <div className="container">
-      <div className="row">
-        <div className="col-sm-12">
-          {inputFields.map((data, index) => {
-            const { item_name, item_price, quantity, total, item_id } = data;
-            return (
-              <div className="row my-3" key={index}>
-                <div className="col-11 d-flex ">
-                  <div className="row">
-                    <div className="form-group col-sm-4 p-1 mx-3">
-                      <Autocomplete
-                        disableClearable
-                        id="dish"
-                        options={fakeDatas}
-                        value={data}
-                        filterSelectedOptions
-                        onSelect={(event) => handleChange(index, event)}
-                        onChange={(event, value) => setSelectedOptions(value)}
-                        getOptionLabel={(option) => option.item_name}
-                        renderInput={(params) => (
-                          <TextField
-                            {...params}
-                            label="Enter/Select Dish"
-                            name="item_name"
-                            style={{
-                              width: "100%",
-                            }}
-                          />
-                        )}
-                      />
-                    </div>
-
-                    <div className="form-group col-sm-2 p-1  mx-3">
-                      <TextField
-                        disabled
-                        id="price"
-                        label="Price"
-                        variant="outlined"
-                        type="text"
-                        onChange={(event) => handleChange(index, event)}
-                        value={item_price}
-                        name="item_price"
-                      />
-                    </div>
-                    <div className="form-group col-sm-2 p-1  mx-3">
-                      <TextField
-                        id="quantity"
-                        label="Quantity"
-                        variant="outlined"
-                        type="number"
-                        onChange={(event) =>
-                          handleQuantityChange(index, event.target.value, data)
-                        }
-                        // value={quantity}
-                        name="quantity"
-                      />
-                    </div>
-
-                    <div className="form-group col-sm-2 p-1  mx-3">
-                      <TextField
-                        disabled
-                        id="total"
-                        label="Total"
-                        variant="outlined"
-                        type="number"
-                        onChange={(event) => handleChange(index, event)}
-                        value={total}
-                        name="total"
-                      />
-                    </div>
-                  </div>
-                </div>
-                {/* {inputFields.length !== 1 ? ( */}
-                <>
-                  <div
-                    className="col-2"
+      {inputFields.map((data, index) => {
+        const { item_name, item_price, quantity, total, item_id } = data;
+        return (
+          <div className="row mb-3" key={index}>
+            <div className="form-group col-sm-4 ">
+              <Autocomplete
+                disableClearable
+                id="dish"
+                options={fakeDatas}
+                value={data}
+                filterSelectedOptions
+                onSelect={(event) => handleChange(index, event)}
+                onChange={(event, value) => setSelectedOptions(value)}
+                getOptionLabel={(option) => option.item_name}
+                renderInput={(params) => (
+                  <TextField
+                    {...params}
+                    label="Enter/Select Dish"
+                    name="item_name"
                     style={{
-                      // position: "absolute",
-                      background: "#FFC727",
-                      borderRadius: "12.695px",
-                      width: "40px",
-                      height: "40px",
-                      left: "1440px",
-                      top: "1024px",
-                      cursor: "pointer",
+                      width: "100%",
                     }}
-                    onClick={() => removeInputFields(index)}
-                  >
-                    <Delete
-                      sx={
-                        {
-                          // fontSize: "18px",
-                        }
+                  />
+                )}
+              />
+            </div>
+
+            <div className="form-group col-sm-2  ">
+              <TextField
+                disabled
+                id="price"
+                label="Price"
+                variant="outlined"
+                type="text"
+                onChange={(event) => handleChange(index, event)}
+                value={item_price}
+                name="item_price"
+              />
+            </div>
+            <div className="form-group col-sm-2  ">
+              <TextField
+                id="quantity"
+                label="Quantity"
+                variant="outlined"
+                type="number"
+                onChange={(event) =>
+                  handleQuantityChange(index, event.target.value, data)
+                }
+                // value={quantity}
+                name="quantity"
+              />
+            </div>
+
+            <div className="form-group col-sm-2  ">
+              <TextField
+                disabled
+                id="total"
+                label="Total"
+                variant="outlined"
+                type="number"
+                onChange={(event) => handleChange(index, event)}
+                value={total}
+                name="total"
+              />
+            </div>
+            <>
+              <div
+                className="col-2"
+                // style={{
+                //   // position: "absolute",
+                //   background: "#FFC727",
+                //   borderRadius: "12.695px",
+                //   width: "40px",
+                //   height: "40px",
+                //   left: "1440px",
+                //   top: "1024px",
+                //   cursor: "pointer",
+                // }}
+              >
+                <div
+                  onClick={() => removeInputFields(index)}
+                  style={{
+                    background: "#fed100",
+                    width: "40px",
+                    height: "40px",
+                    margin: "8px auto",
+                    textAlign: "center",
+                    padding: "7px",
+                    borderRadius: "10px",
+                    cursor: "pointer",
+                  }}
+                >
+                  <Delete
+                    sx={
+                      {
+                        // fontSize: "18px",
                       }
-                    />
-                  </div>
-                </>
-                {/* ) : (
+                    }
+                  />
+                </div>
+              </div>
+            </>
+
+            {/* {inputFields.length !== 1 ? ( */}
+
+            {/* ) : (
                   ""
                 )} */}
-              </div>
-            );
-          })}
-
-          <div className="row">
-            <div className="col-sm-12 text-start pb-3">
-              <Button
-                variant="contained"
-                size="small"
-                style={{
-                  // marginTop: "5px",
-                  width: "161px",
-                  height: "50px",
-                  backgroundColor: "#FFC727",
-                  borderRadius: "12.695px",
-                  fontFamily: "Poppins",
-                  fontStyle: "normal",
-                  fontWeight: "500",
-                  fontSize: "15px",
-                  lineHeight: "22px",
-                  color: "rgba(0, 0, 0, 0.8)",
-                }}
-                onClick={addInputField}
-              >
-                Add New
-              </Button>
-            </div>
           </div>
+        );
+      })}
+
+      <div className="row">
+        <div className="col-sm-12 text-start pb-3">
+          <Button
+            variant="contained"
+            size="small"
+            style={{
+              // marginTop: "5px",
+              width: "161px",
+              height: "50px",
+              backgroundColor: "#FFC727",
+              borderRadius: "12.695px",
+              fontFamily: "Poppins",
+              fontStyle: "normal",
+              fontWeight: "500",
+              fontSize: "15px",
+              lineHeight: "22px",
+              color: "rgba(0, 0, 0, 0.8)",
+            }}
+            onClick={addInputField}
+          >
+            Add New
+          </Button>
         </div>
       </div>
     </div>

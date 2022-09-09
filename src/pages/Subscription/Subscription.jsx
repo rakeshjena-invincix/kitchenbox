@@ -22,7 +22,7 @@ const Subscription = () => {
             <h2 className="text-center" style={{ fontSize: "32px" }}>
               Meal Plans
             </h2>
-            <hr />
+            <hr className="hrBanner" />
             <div className="row g-2">
               <div className="col-md-4 col-sm-6 col-xs-12">
                 <Link to="/subscription-plan">

@@ -37,6 +37,8 @@ const SubscriptionPlan = () => {
         <Banner imgBanner={subscriptionBanner} />
 
         <h6 className="text-center mt-3 ">Veg Only</h6>
+        <hr className="hrBanner" />
+
         <div className="row d-flex justify-content-center mb-5">
           <div className="col-sm-12 col-md-6">
             <div>
@@ -355,6 +357,7 @@ const SubscriptionPlan = () => {
             </div>
             <div className="mb-3 mt-3">
               <p className="">Select Days:</p>
+
               <Stack
                 direction={{ xs: "column", sm: "row" }}
                 spacing={{ xs: 1, sm: 2, md: 4 }}
